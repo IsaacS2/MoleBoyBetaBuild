@@ -7,7 +7,7 @@
 
 //
 // Massive thanks to Shaun Spalding for the video
-// "GameMaker - Simple Pause Tutorial", where practically
+// "GameMaker - Simple Pause Tutorial", where almost
 // all of the code for this object and pause mechanic
 // comes from.
 //
