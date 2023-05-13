@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "func_static_obstacle_movement",
+  "name": "script_obstacle_movement",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
