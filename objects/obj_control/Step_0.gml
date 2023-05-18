@@ -15,7 +15,8 @@ if (speedChange == 1) {
 if (dirtSlowCnt >= slowDown) {
 	dirtSpawnCnt = (dirtSpawnCnt + 1) % dirtSpawnVal;
 }
-// Code below results in no dirt patches being spawned when slowDown occurs
+// Code below results in dirt patches being spawned every other frame when slow-down occurs,
+// since dirt will not spawn when dirtSlowCnt is 1 while slowDown is 2.
 if dirtSlowCnt == 1 {
 	dirtSlowCnt = 2;
 } else {

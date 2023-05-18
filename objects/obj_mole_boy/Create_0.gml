@@ -7,15 +7,15 @@
 
 slip = 1;  // for diiferent environment changes
 movement = 2;// * obj_control.moleBoySpeed;
-currMovement = movement;
+currMovement = movement;  // unchanged variabled that is used to return movement to original value
 right = 0;
 startY = 96;
 powerUp1 = 0;
 powerUp2 = 0;
 momentum = 0;
-directionInc = 2;// * obj_control.moleBoySpeed;
-noInputInc = 1;// * obj_control.moleBoySpeed;
-maxMomentum = 6;// * obj_control.moleBoySpeed;
+directionInc = 2;// * obj_control.moleBoySpeed;  // value used to increase/decrease Mole Boy's directional movement with input
+noInputInc = 1;// * obj_control.moleBoySpeed;  // value used to stop Mole Boy's directional movement without input
+maxMomentum = 6;// * obj_control.moleBoySpeed;  
 drillY = 67; // room_height / 15;
 drillCnt = 0;
 drillStallCnt = 0;
@@ -37,10 +37,13 @@ wormBarY = 26;
 wormBarHeight = 20;
 wormBarWidth = 308;
 wormDecreaseCnt = 1;
-wormDecreaseTime = 15;
+wormDecreaseTime = 15;  // Determines the amount of frames until worm meter is updated
+originalWormDecreaseTime = wormDecreaseTime;
 wormEatenBoost = round(wormMeterMax / 2);
 
-
+//
+// Mole Boy states and speed values
+//
 canDrill = true;
 drilling = false;
 stalling = false;
@@ -50,11 +53,24 @@ newGameSpeed = 1;
 newMoleSpeed = 1;
 
 //
-// point/cash values
+// Point/cash values
 //
 rockCash = 50;
 moleCurrCash = 0;
 
+//
+// Location values
+//
 y = startY;
 x = room_width / 2;
 depth = -5;
+
+//
+// Key values (save whether direction and other keys have been pressed)
+//
+keyRight = false;
+keyLeft = false;
+keyUp = false;
+keyDown = false;
+keyAttack = false;
+keyPower = false;

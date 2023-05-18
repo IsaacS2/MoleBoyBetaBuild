@@ -5,10 +5,12 @@
 //
 if (currWinnings > 0) {
 	currWinnings--;
-	moneyVal++;
+	moneyTotal++;  // finally, currWinnings values slowly added to moneyTotal
 }
 
-
+//
+// game speed increased!
+//
 if (speedChange == 1) {
 	scoreMultiplier = 0.25 * speedUp;
 	rockInc = 1 * speedUp;

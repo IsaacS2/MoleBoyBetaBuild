@@ -33,7 +33,7 @@ if (place_meeting(x, y, obj_saw_obstacle)) {
 //
 if ( place_meeting(x, y, obj_rock_obstacle) || place_meeting(x, y, obj_big_rock_obstacle) ) {
 	if (drilling) {  // "destroy" rock
-		while (place_meeting(x, y, obj_rock_obstacle)) {
+		while (place_meeting(x, y, obj_rock_obstacle)) {  // in case multiple rocks are destroyed
 			rock = instance_nearest(x, y, obj_rock_obstacle)
 			instance_create_depth(rock.x, rock.y, 0, obj_rock_broken);
 			instance_destroy(instance_nearest(x, y, obj_rock_obstacle));
@@ -71,7 +71,7 @@ if (inRock && !place_meeting(x, y, obj_rock_obstacle)
 // Time to add to score
 //
 obj_control.currentScore += (obj_control.scoreMultiplier / obj_control.slowDown);
-obj_control.currWinnings += moleCurrCash;
+obj_control.currWinnings += moleCurrCash;  // second, cash added to object's currWinnings
 moleCurrCash = 0;
 
 

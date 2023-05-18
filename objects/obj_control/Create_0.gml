@@ -6,6 +6,11 @@
 // Started Summer 2022
 //
 
+//
+// TODO: Add randomize function when testing random values
+//
+//randomize();
+
 
 //
 // values for changing speed
@@ -25,7 +30,7 @@ boundaryWidth = 16;  // for obj_boundary measure
 scoreMultiplier = 0.25 * speedUp;
 currentScore = 0;
 slowDown = 1;
-moneyVal = 0;
+moneyTotal = 0;
 currWinnings = 0;
 
 //
@@ -36,10 +41,10 @@ maxRockTimer = 40;
 rockSpawner = irandom_range(minRockTimer, maxRockTimer);
 rockWidth = 40;
 minRockX = rockWidth;
-maxRockX = room_width - rockWidth; //rockWidth;
+maxRockX = room_width - rockWidth;
 rockLocation = irandom_range(minRockX, maxRockX);
 rockCnt = 0;
-rockInc = 1 * speedUp;
+rockInc = 1 * speedUp;  // 1 may be replaced by var that better matches desired spawn rate later in dev
 
 //
 // values for spawning saws
@@ -72,7 +77,7 @@ wormInc = 1 * speedUp;
 //
 dirtSpawnVal = floor(10 / speedUp);
 dirtSpawnCnt = 0;
-dirtSlowCnt = 1;
+dirtSlowCnt = 1;  // if slowDown is 2, dirt patches will be spawned every other frames cause of this var
 maxDirtDistance = floor(96 / speedUp)
 
 depth = -1;
