@@ -14,4 +14,3 @@ yMovement = 9;
 yDelete = -64;
 image_index = 1;
 image_speed = 1;
-newGameSpeed = 1;

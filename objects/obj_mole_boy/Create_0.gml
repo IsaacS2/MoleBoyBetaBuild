@@ -49,7 +49,6 @@ drilling = false;
 stalling = false;
 returning = false;
 inRock = false;
-newGameSpeed = 1;
 newMoleSpeed = 1;
 
 //
