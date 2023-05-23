@@ -58,7 +58,9 @@ if (wormCnt >= wormSpawner) {
 }
 
 if (keyboard_check_pressed(ord("G"))) {
-	speedUp += 0.5;
+	global.currentExcavationSpeed += 0.5;
+	obstacleSpeed = floor(9 * global.currentExcavationSpeed);
+	layer_vspeed(lay_id, -floor(obstacleSpeed / slowDown));
 	global.speedChange = true;
 }
 

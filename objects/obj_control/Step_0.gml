@@ -1,10 +1,9 @@
 /// @description Add dirt patches and adjust background speed!
 
 //
-// background speed altered
+// speed change complete
 //
 if (global.speedChange) {
-	layer_vspeed(lay_id, -floor(obstacleSpeed / slowDown));
 	global.speedChange = false;
 }
 

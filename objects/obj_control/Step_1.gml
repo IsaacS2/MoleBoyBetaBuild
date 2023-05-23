@@ -1,4 +1,4 @@
-/// @description SpeedUp and others!
+/// @description global.currentExcavationSpeed and others!
 
 //
 // add to money total!
@@ -12,11 +12,10 @@ if (currWinnings > 0) {
 // game speed increased!
 //
 if (global.speedChange) {
-	scoreMultiplier = 0.25 * speedUp;
-	rockInc = 1 * speedUp;
-	sawInc = 1 * speedUp;
-	wormInc = 1 * speedUp;
-	dirtSpawnVal = floor (10 / speedUp);
-	maxDirtDistance = floor (96 * speedUp);
-	obstacleSpeed = floor(9 * speedUp);
+	scoreMultiplier = 0.25 * global.currentExcavationSpeed;
+	rockInc = 1 * global.currentExcavationSpeed;
+	sawInc = 1 * global.currentExcavationSpeed;
+	wormInc = 1 * global.currentExcavationSpeed;
+	dirtSpawnVal = floor (10 / global.currentExcavationSpeed);
+	maxDirtDistance = floor (96 * global.currentExcavationSpeed);
 }

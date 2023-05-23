@@ -3,6 +3,6 @@
 function func_worm_movement(_right){
 	wormSideSpeed = 2;
 	wormUpSpeed = 3;
-	x += floor(_right * obj_control.speedUp * wormSideSpeed);
-	y -= floor( (obj_control.speedUp * wormUpSpeed) / obj_control.slowDown);
+	x += floor(_right * global.currentExcavationSpeed * wormSideSpeed);
+	y -= floor( (global.currentExcavationSpeed * wormUpSpeed) / obj_control.slowDown);
 }

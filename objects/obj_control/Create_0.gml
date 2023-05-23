@@ -16,7 +16,6 @@
 // values for changing speed
 //
 moleBoySpeed = 1;
-speedUp = 1;
 obstacleSpeed = 9;
 // TODO: Alter when adding more screens/rooms
 lay_id = layer_get_id("Background");
@@ -26,7 +25,7 @@ boundaryWidth = 16;  // for obj_boundary measure
 //
 // values that alter score/money
 //
-scoreMultiplier = 0.25 * speedUp;
+scoreMultiplier = 0.25 * global.currentExcavationSpeed;
 currentScore = 0;
 slowDown = 1;
 moneyTotal = 0;
@@ -43,7 +42,7 @@ minRockX = rockWidth;
 maxRockX = room_width - rockWidth;
 rockLocation = irandom_range(minRockX, maxRockX);
 rockCnt = 0;
-rockInc = 1 * speedUp;  // 1 may be replaced by var that better matches desired spawn rate later in dev
+rockInc = 1 * global.currentExcavationSpeed;  // 1 may be replaced by var that better matches desired spawn rate later in dev
 
 //
 // values for spawning saws
@@ -56,7 +55,7 @@ minSawX = sawWidth;
 maxSawX = room_width - sawWidth;
 sawLocation = irandom_range(minSawX, maxSawX);
 sawCnt = 0;
-sawInc = 1 * speedUp;
+sawInc = 1 * global.currentExcavationSpeed;
 
 //
 // values for spawning worms
@@ -69,14 +68,14 @@ minWormX = (room_width / 2) - (wormWidth);
 maxWormX = (room_width / 2) + (wormWidth);
 wormLocation = irandom_range(minWormX, maxWormX);
 wormCnt = 0;
-wormInc = 1 * speedUp;
+wormInc = 1 * global.currentExcavationSpeed;
 
 //
 // values for spawning dug dirt patches
 //
-dirtSpawnVal = floor(10 / speedUp);
+dirtSpawnVal = floor(10 / global.currentExcavationSpeed);
 dirtSpawnCnt = 0;
 dirtSlowCnt = 1;  // if slowDown is 2, dirt patches will be spawned every other frames cause of this var
-maxDirtDistance = floor(96 / speedUp)
+maxDirtDistance = floor(96 / global.currentExcavationSpeed)
 
 depth = -1;

@@ -11,7 +11,7 @@
 divider = 96;
 multiplier = 9;
 
-yMovement = floor(multiplier * obj_control.speedUp);
+yMovement = floor(multiplier * global.currentExcavationSpeed);
 yStart = room_height + 64;
 yDelete = -64;  // -160 for big rock use
 image_speed = 0;

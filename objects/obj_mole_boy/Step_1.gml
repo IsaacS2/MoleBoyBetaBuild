@@ -17,9 +17,8 @@ keyPower = keyboard_check(ord("C"));
 //
 // Second, update variables due to game speed up or mole boy speed up
 //
-if (newGameSpeed < obj_control.speedUp) {  // game speed updated
-	wormDecreaseTime = round(originalWormDecreaseTime / obj_control.speedUp);
-	newGameSpeed = obj_control.speedUp;
+if (global.speedChange) {  // game speed updated
+	wormDecreaseTime = round(originalWormDecreaseTime / global.currentExcavationSpeed);
 }
 if (newMoleSpeed < obj_control.moleBoySpeed) {  // Mole Boy speed updated
 	movement = round(2 * obj_control.moleBoySpeed);  // Increase base movement
