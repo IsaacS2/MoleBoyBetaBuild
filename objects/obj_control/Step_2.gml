@@ -12,7 +12,7 @@ if (rockCnt >= rockSpawner) {
 }
 
 if (keyboard_check_pressed(ord("R"))) {
-	room_restart();
+	func_reset_excavation();
 }
 
 
@@ -59,7 +59,7 @@ if (wormCnt >= wormSpawner) {
 
 if (keyboard_check_pressed(ord("G"))) {
 	speedUp += 0.5;
-	speedChange = 1;
+	global.speedChange = true;
 }
 
 if (keyboard_check_pressed(ord("M"))) {

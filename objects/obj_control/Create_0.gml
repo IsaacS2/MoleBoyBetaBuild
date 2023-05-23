@@ -17,7 +17,6 @@
 //
 moleBoySpeed = 1;
 speedUp = 1;
-speedChange = 0;
 obstacleSpeed = 9;
 // TODO: Alter when adding more screens/rooms
 lay_id = layer_get_id("Background");

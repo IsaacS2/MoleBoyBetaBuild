@@ -3,9 +3,9 @@
 //
 // background speed altered
 //
-if (speedChange == 1) {
+if (global.speedChange) {
 	layer_vspeed(lay_id, -floor(obstacleSpeed / slowDown));
-	speedChange = 0;
+	global.speedChange = false;
 }
 
 

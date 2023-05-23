@@ -44,7 +44,6 @@
     {"id":{"name":"script_obstacle_movement","path":"scripts/script_obstacle_movement/script_obstacle_movement.yy",},},
     {"id":{"name":"spr_worm_eaten","path":"sprites/spr_worm_eaten/spr_worm_eaten.yy",},},
     {"id":{"name":"par_obj_obstacle","path":"objects/par_obj_obstacle/par_obj_obstacle.yy",},},
-    {"id":{"name":"script_reset_room","path":"scripts/script_reset_room/script_reset_room.yy",},},
     {"id":{"name":"spr_dirt_space_full","path":"sprites/spr_dirt_space_full/spr_dirt_space_full.yy",},},
     {"id":{"name":"spr_rock","path":"sprites/spr_rock/spr_rock.yy",},},
     {"id":{"name":"spr_big_rock","path":"sprites/spr_big_rock/spr_big_rock.yy",},},

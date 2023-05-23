@@ -25,7 +25,6 @@
     {"name":"script_obstacle_movement","order":1,"path":"scripts/script_obstacle_movement/script_obstacle_movement.yy",},
     {"name":"spr_worm_eaten","order":5,"path":"sprites/spr_worm_eaten/spr_worm_eaten.yy",},
     {"name":"par_obj_obstacle","order":5,"path":"objects/par_obj_obstacle/par_obj_obstacle.yy",},
-    {"name":"script_reset_room","order":4,"path":"scripts/script_reset_room/script_reset_room.yy",},
     {"name":"spr_dirt_space_full","order":2,"path":"sprites/spr_dirt_space_full/spr_dirt_space_full.yy",},
     {"name":"spr_rock","order":1,"path":"sprites/spr_rock/spr_rock.yy",},
     {"name":"obj_boundary","order":1,"path":"objects/obj_boundary/obj_boundary.yy",},

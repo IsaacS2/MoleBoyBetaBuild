@@ -11,7 +11,7 @@ if (currWinnings > 0) {
 //
 // game speed increased!
 //
-if (speedChange == 1) {
+if (global.speedChange) {
 	scoreMultiplier = 0.25 * speedUp;
 	rockInc = 1 * speedUp;
 	sawInc = 1 * speedUp;

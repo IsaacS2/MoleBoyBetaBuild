@@ -18,7 +18,7 @@ if (place_meeting(x, y, obj_worm)) {
 // saw collision
 //
 if (place_meeting(x, y, obj_saw_obstacle)) {
-	room_restart();
+	func_reset_excavation();
 }
 
 
@@ -84,6 +84,6 @@ if (wormDecreaseCnt >= wormDecreaseTime) {
 	wormDecreaseCnt = 0;
 	wormMeterVal -= wormDepletion;
 	if (wormMeterVal <= 0) {
-		room_restart();  // DEATH
+		func_reset_excavation();  // DEATH
 	}
 }
