@@ -68,7 +68,7 @@ if (inRock && !place_meeting(x, y, obj_rock_obstacle)
 //
 // Time to add to score
 //
-obj_control.currentScore += (obj_control.scoreMultiplier / global.rockSlowDown);
+global.currentDepth += (obj_control.scoreMultiplier / global.rockSlowDown);
 obj_control.currWinnings += moleCurrCash;  // second, cash added to object's currWinnings
 moleCurrCash = 0;
 

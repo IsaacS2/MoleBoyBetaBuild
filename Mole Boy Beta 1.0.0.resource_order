@@ -30,6 +30,7 @@
     {"name":"obj_boundary","order":1,"path":"objects/obj_boundary/obj_boundary.yy",},
     {"name":"obj_pause","order":10,"path":"objects/obj_pause/obj_pause.yy",},
     {"name":"spr_mole_boy_drilling","order":4,"path":"sprites/spr_mole_boy_drilling/spr_mole_boy_drilling.yy",},
+    {"name":"rm_init","order":1,"path":"rooms/rm_init/rm_init.yy",},
     {"name":"script_global_elements","order":3,"path":"scripts/script_global_elements/script_global_elements.yy",},
     {"name":"script_worm_movement","order":2,"path":"scripts/script_worm_movement/script_worm_movement.yy",},
     {"name":"spr_mole_boy_skinny","order":3,"path":"sprites/spr_mole_boy_skinny/spr_mole_boy_skinny.yy",},

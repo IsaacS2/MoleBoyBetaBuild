@@ -7,7 +7,6 @@ if (global.speedChange) {
 	global.speedChange = false;
 }
 
-
 //
 // dirt spawning altered
 //

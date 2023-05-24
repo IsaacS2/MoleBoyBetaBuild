@@ -25,7 +25,6 @@ boundaryWidth = 16;  // for obj_boundary measure
 // values that alter score/money
 //
 scoreMultiplier = 0.25 * global.currentExcavationSpeed;
-currentScore = 0;
 moneyTotal = 0;
 currWinnings = 0;
 

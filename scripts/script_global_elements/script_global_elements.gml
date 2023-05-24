@@ -13,11 +13,13 @@ global.speedChange = false;
 global.rockSlowDown = outsideRockSpeed;
 global.currentExcavationSpeed = 1;
 global.layerSpeed = floor(startingLayerSpeed);
+global.currentDepth = 0;
 
 function func_reset_excavation(){
 	global.speedChange = false;
 	global.rockSlowDown = outsideRockSpeed;
 	global.currentExcavationSpeed = 1;
 	global.layerSpeed = floor(startingLayerSpeed);
+	global.currentDepth = 0;
 	room_restart();
 }

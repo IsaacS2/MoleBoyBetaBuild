@@ -15,7 +15,6 @@ if (keyboard_check_pressed(ord("R"))) {
 	func_reset_excavation();
 }
 
-
 //
 // spawn saws!
 //
