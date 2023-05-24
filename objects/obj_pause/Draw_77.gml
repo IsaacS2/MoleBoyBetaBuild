@@ -57,7 +57,7 @@ if (keyboard_check_pressed(ord("P"))) {
 		if (buffer_exists(pauseSurfBuffer)) {  // free surface in buffer
 			buffer_delete(pauseSurfBuffer);
 		}
-		layer_vspeed(obj_control.lay_id, -floor(obj_control.obstacleSpeed / global.rockSlowDown));
+		layer_vspeed(obj_control.lay_id, -floor(global.layerSpeed / global.rockSlowDown));
 	}
 	pause = !pause
 }

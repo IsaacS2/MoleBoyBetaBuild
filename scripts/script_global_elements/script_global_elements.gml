@@ -12,12 +12,12 @@ global.gamePaused = false;
 global.speedChange = false;
 global.rockSlowDown = outsideRockSpeed;
 global.currentExcavationSpeed = 1;
-global.layerSpeed = floor(startingLayerSpeed * global.currentExcavationSpeed);
+global.layerSpeed = floor(startingLayerSpeed);
 
 function func_reset_excavation(){
 	global.speedChange = false;
 	global.rockSlowDown = outsideRockSpeed;
 	global.currentExcavationSpeed = 1;
-	//global.layerSpeed = floor(startingLayerSpeed * global.currentExcavationSpeed);
+	global.layerSpeed = floor(startingLayerSpeed);
 	room_restart();
 }

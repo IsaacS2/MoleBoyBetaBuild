@@ -16,6 +16,7 @@ if (global.speedChange) {
 	rockInc = 1 * global.currentExcavationSpeed;
 	sawInc = 1 * global.currentExcavationSpeed;
 	wormInc = 1 * global.currentExcavationSpeed;
-	dirtSpawnVal = floor (10 / global.currentExcavationSpeed);
+	// to prevent division by zero when speed is incredibly high
+	dirtSpawnVal = max(floor (10 / global.currentExcavationSpeed), 1);
 	maxDirtDistance = floor (96 * global.currentExcavationSpeed);
 }

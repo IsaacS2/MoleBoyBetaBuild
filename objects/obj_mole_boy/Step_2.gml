@@ -13,14 +13,12 @@ if (place_meeting(x, y, obj_worm)) {
 	wormMeterVal = min(wormMeterMax, wormMeterVal + wormEatenBoost);  // Delicious worm!
 }
 
-
 //
 // saw collision
 //
 if (place_meeting(x, y, obj_saw_obstacle)) {
 	func_reset_excavation();
 }
-
 
 //
 // rock collision
@@ -50,7 +48,7 @@ if ( place_meeting(x, y, obj_rock_obstacle) || place_meeting(x, y, obj_big_rock_
 		movement = floor (movement / 2);
 		global.rockSlowDown = insideRockSpeed;
 		// For altering background speed
-		layer_vspeed(obj_control.lay_id, -floor(obj_control.obstacleSpeed / global.rockSlowDown));
+		layer_vspeed(obj_control.lay_id, -floor(global.layerSpeed / global.rockSlowDown));
 	}
 } 
 //
@@ -63,7 +61,7 @@ if (inRock && !place_meeting(x, y, obj_rock_obstacle)
 	movement = currMovement;
 	global.rockSlowDown = outsideRockSpeed;
 	// For returning background speed to normal
-	layer_vspeed(obj_control.lay_id, -floor(obj_control.obstacleSpeed / global.rockSlowDown));
+	layer_vspeed(obj_control.lay_id, -floor(global.layerSpeed / global.rockSlowDown));
 }
 
 

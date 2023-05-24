@@ -4,5 +4,5 @@
 // Time to speed up obstacles!
 //
 if (global.speedChange) {
-	yMovement = floor(multiplier * global.currentExcavationSpeed);
+	yMovement = floor(startingLayerSpeed * global.currentExcavationSpeed);
 }

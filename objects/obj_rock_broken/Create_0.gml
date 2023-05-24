@@ -8,9 +8,7 @@
 //
 // values for calculating speed
 //
-multiplier = 9;
-
-yMovement = 9;
+yMovement = floor(startingLayerSpeed * global.currentExcavationSpeed);
 yDelete = -64;
 image_index = 1;
 image_speed = 1;

@@ -15,4 +15,3 @@ yDelete = -64;
 // Thanks to Gurpreet Singh Matharoo for image-flipping info at 
 // https://gamemakerhow.com/how-to-flip-an-instance-sprite/
 //
-// image_xscale = right;
