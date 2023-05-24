@@ -48,9 +48,9 @@ if ( place_meeting(x, y, obj_rock_obstacle) || place_meeting(x, y, obj_big_rock_
 		momentum = 0;
 		image_angle = 0;
 		movement = floor (movement / 2);
-		obj_control.slowDown = 2;
+		global.rockSlowDown = insideRockSpeed;
 		// For altering background speed
-		layer_vspeed(obj_control.lay_id, -floor(obj_control.obstacleSpeed / obj_control.slowDown));
+		layer_vspeed(obj_control.lay_id, -floor(obj_control.obstacleSpeed / global.rockSlowDown));
 	}
 } 
 //
@@ -61,16 +61,16 @@ if (inRock && !place_meeting(x, y, obj_rock_obstacle)
 	inRock = false;
 	sprite_set_speed(sprite_index, 60, spritespeed_framespersecond);
 	movement = currMovement;
-	obj_control.slowDown = 1;
+	global.rockSlowDown = outsideRockSpeed;
 	// For returning background speed to normal
-	layer_vspeed(obj_control.lay_id, -floor(obj_control.obstacleSpeed / obj_control.slowDown));
+	layer_vspeed(obj_control.lay_id, -floor(obj_control.obstacleSpeed / global.rockSlowDown));
 }
 
 
 //
 // Time to add to score
 //
-obj_control.currentScore += (obj_control.scoreMultiplier / obj_control.slowDown);
+obj_control.currentScore += (obj_control.scoreMultiplier / global.rockSlowDown);
 obj_control.currWinnings += moleCurrCash;  // second, cash added to object's currWinnings
 moleCurrCash = 0;
 
@@ -78,7 +78,7 @@ moleCurrCash = 0;
 //
 // Time to calculate worm count
 //
-wormDecreaseCnt += obj_control.slowDown;  // for rock collision worm meter penalty
+wormDecreaseCnt += global.rockSlowDown;  // for rock collision worm meter penalty
 // removing from worm meter
 if (wormDecreaseCnt >= wormDecreaseTime) {
 	wormDecreaseCnt = 0;

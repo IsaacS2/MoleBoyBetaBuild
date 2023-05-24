@@ -27,7 +27,6 @@ boundaryWidth = 16;  // for obj_boundary measure
 //
 scoreMultiplier = 0.25 * global.currentExcavationSpeed;
 currentScore = 0;
-slowDown = 1;
 moneyTotal = 0;
 currWinnings = 0;
 
@@ -75,7 +74,7 @@ wormInc = 1 * global.currentExcavationSpeed;
 //
 dirtSpawnVal = floor(10 / global.currentExcavationSpeed);
 dirtSpawnCnt = 0;
-dirtSlowCnt = 1;  // if slowDown is 2, dirt patches will be spawned every other frames cause of this var
+dirtSlowCnt = 1;  // if global.rockSlowDown is insideRockSpeed, dirt patches will be spawned every other frames cause of this var
 maxDirtDistance = floor(96 / global.currentExcavationSpeed)
 
 depth = -1;

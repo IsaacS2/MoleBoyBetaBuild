@@ -16,7 +16,7 @@ global.layerSpeed = floor(startingLayerSpeed * global.currentExcavationSpeed);
 
 function func_reset_excavation(){
 	global.speedChange = false;
-	//global.rockSlowDown = outsideRockSpeed;
+	global.rockSlowDown = outsideRockSpeed;
 	global.currentExcavationSpeed = 1;
 	//global.layerSpeed = floor(startingLayerSpeed * global.currentExcavationSpeed);
 	room_restart();

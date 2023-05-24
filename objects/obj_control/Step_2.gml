@@ -1,5 +1,5 @@
 /// @description Spawn rocks and stuff!
-rockCnt += rockInc / slowDown;
+rockCnt += rockInc / global.rockSlowDown;
 
 // rock will be spawned down now
 if (rockCnt >= rockSpawner) {
@@ -19,7 +19,7 @@ if (keyboard_check_pressed(ord("R"))) {
 //
 // spawn saws!
 //
-sawCnt += sawInc / slowDown;
+sawCnt += sawInc / global.rockSlowDown;
 
 // saw will be spawned down now
 if (sawCnt >= sawSpawner) {
@@ -35,7 +35,7 @@ if (sawCnt >= sawSpawner) {
 //
 // spawn worms!
 //
-wormCnt += wormInc / slowDown;
+wormCnt += wormInc / global.rockSlowDown;
 
 // worm will be spawned down now
 if (wormCnt >= wormSpawner) {
@@ -60,7 +60,7 @@ if (wormCnt >= wormSpawner) {
 if (keyboard_check_pressed(ord("G"))) {
 	global.currentExcavationSpeed += 0.5;
 	obstacleSpeed = floor(9 * global.currentExcavationSpeed);
-	layer_vspeed(lay_id, -floor(obstacleSpeed / slowDown));
+	layer_vspeed(lay_id, -floor(obstacleSpeed / global.rockSlowDown));
 	global.speedChange = true;
 }
 

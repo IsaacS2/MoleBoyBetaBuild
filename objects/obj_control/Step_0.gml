@@ -11,11 +11,11 @@ if (global.speedChange) {
 //
 // dirt spawning altered
 //
-if (dirtSlowCnt >= slowDown) {
+if (dirtSlowCnt >= global.rockSlowDown) {
 	dirtSpawnCnt = (dirtSpawnCnt + 1) % dirtSpawnVal;
 }
 // Code below results in dirt patches being spawned every other frame when slow-down occurs,
-// since dirt will not spawn when dirtSlowCnt is 1 while slowDown is 2.
+// since dirt will not spawn when dirtSlowCnt is 1 while global.rockSlowDown is insideRockSpeed.
 if dirtSlowCnt == 1 {
 	dirtSlowCnt = 2;
 } else {
