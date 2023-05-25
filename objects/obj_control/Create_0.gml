@@ -20,7 +20,6 @@ func_initialize_globals();
 //
 // values for changing speed
 //
-moleBoySpeed = 1;
 // TODO: Alter when adding more screens/rooms
 lay_id = layer_get_id("Background");
 boundaryWidth = 16;  // for obj_boundary measure

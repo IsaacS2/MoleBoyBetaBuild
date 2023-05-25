@@ -1,6 +1,7 @@
 #macro outsideRockSpeed 1
 #macro insideRockSpeed 2
 #macro excavationSpeedIncrementVal 0.5
+#macro moleBoySpeedIncrementVal 0.5
 #macro startingLayerSpeed 9
 
 //

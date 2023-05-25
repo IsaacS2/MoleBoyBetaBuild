@@ -64,6 +64,6 @@ if (keyboard_check_pressed(ord("G"))) {
 }
 
 if (keyboard_check_pressed(ord("M"))) {
-	moleBoySpeed += 0.5;
+	global.currentMoleBoySpeed += 0.5;
 	global.moleBoySpeedChange = true;
 }

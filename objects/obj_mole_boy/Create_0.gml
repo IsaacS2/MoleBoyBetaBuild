@@ -6,17 +6,17 @@
 //
 
 slip = 1;  // for diiferent environment changes
-movement = 2;// * obj_control.moleBoySpeed;
+movement = 2;
 currMovement = movement;  // unchanged variabled that is used to return movement to original value
 right = 0;
 startY = 96;
 powerUp1 = 0;
 powerUp2 = 0;
 momentum = 0;
-directionInc = 2;// * obj_control.moleBoySpeed;  // value used to increase/decrease Mole Boy's directional movement with input
-noInputInc = 1;// * obj_control.moleBoySpeed;  // value used to stop Mole Boy's directional movement without input
-maxMomentum = 6;// * obj_control.moleBoySpeed;  
-drillY = 67; // room_height / 15;
+directionInc = 2;  // value used to increase/decrease Mole Boy's directional movement with input
+noInputInc = 1;  // value used to stop Mole Boy's directional movement without input
+maxMomentum = 6; 
+drillY = 67;
 drillCnt = 0;
 drillStallCnt = 0;
 endDrill = 5;
