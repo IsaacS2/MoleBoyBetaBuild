@@ -54,6 +54,7 @@
     {"id":{"name":"script_global_elements","path":"scripts/script_global_elements/script_global_elements.yy",},},
     {"id":{"name":"script_worm_movement","path":"scripts/script_worm_movement/script_worm_movement.yy",},},
     {"id":{"name":"spr_mole_boy_skinny","path":"sprites/spr_mole_boy_skinny/spr_mole_boy_skinny.yy",},},
+    {"id":{"name":"obj_init","path":"objects/obj_init/obj_init.yy",},},
     {"id":{"name":"spr_dirt_space","path":"sprites/spr_dirt_space/spr_dirt_space.yy",},},
     {"id":{"name":"spr_worm_bar","path":"sprites/spr_worm_bar/spr_worm_bar.yy",},},
     {"id":{"name":"spr_boundary","path":"sprites/spr_boundary/spr_boundary.yy",},},
@@ -81,8 +82,8 @@
     {"id":{"name":"rm_excavation","path":"rooms/rm_excavation/rm_excavation.yy",},},
   ],
   "RoomOrderNodes": [
-    {"roomId":{"name":"rm_excavation","path":"rooms/rm_excavation/rm_excavation.yy",},},
     {"roomId":{"name":"rm_init","path":"rooms/rm_init/rm_init.yy",},},
+    {"roomId":{"name":"rm_excavation","path":"rooms/rm_excavation/rm_excavation.yy",},},
   ],
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},

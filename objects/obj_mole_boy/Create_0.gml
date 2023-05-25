@@ -22,6 +22,7 @@ drillStallCnt = 0;
 endDrill = 5;
 endStall = 5;
 returnY = room_height / 64;
+rockCash = 50;
 
 //
 // values for creating/changing worm meter
@@ -52,12 +53,6 @@ inRock = false;
 newMoleSpeed = 1;
 
 //
-// Point/cash values
-//
-rockCash = 50;
-moleCurrCash = 0;
-
-//
 // Location values
 //
 y = startY;
@@ -65,7 +60,7 @@ x = room_width / 2;
 depth = -5;
 
 //
-// Key values (save whether direction and other keys have been pressed)
+// Key values (save whether direction and other command keys have been pressed)
 //
 keyRight = false;
 keyLeft = false;

@@ -44,7 +44,7 @@ if (keyAttack && canDrill) { // Drilling time!
 		rock = instance_nearest(x, y, obj_rock_obstacle)
 		instance_create_depth(rock.x, rock.y, 0, obj_rock_broken);  // new broken rock that plays animation
 		instance_destroy(instance_nearest(x, y, obj_rock_obstacle));
-		moleCurrCash += rockCash;  // first, cash added to Mole Boy
+		global.newWinnings += rockCash;
 	}
 }
 

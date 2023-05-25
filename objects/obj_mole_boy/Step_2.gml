@@ -1,4 +1,4 @@
-/// @description Enemy/obstacle collision
+/// @description Enemy/obstacle collision, worm meter depletion
 
 
 //
@@ -35,7 +35,7 @@ if ( place_meeting(x, y, obj_rock_obstacle) || place_meeting(x, y, obj_big_rock_
 			rock = instance_nearest(x, y, obj_rock_obstacle)
 			instance_create_depth(rock.x, rock.y, 0, obj_rock_broken);
 			instance_destroy(instance_nearest(x, y, obj_rock_obstacle));
-			moleCurrCash += rockCash;
+			global.newWinnings += rockCash;  //cash added to global.newWinnings
 		}
 		if (place_meeting(x, y, obj_big_rock_obstacle)) {
 			instance_destroy(instance_nearest(x, y, obj_big_rock_obstacle));
@@ -66,12 +66,9 @@ if (inRock && !place_meeting(x, y, obj_rock_obstacle)
 
 
 //
-// Time to add to score
+// Time to add to depth
 //
 global.currentDepth += (obj_control.scoreMultiplier / global.rockSlowDown);
-obj_control.currWinnings += moleCurrCash;  // second, cash added to object's currWinnings
-moleCurrCash = 0;
-
 
 //
 // Time to calculate worm count

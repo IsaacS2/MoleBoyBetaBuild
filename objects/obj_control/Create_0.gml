@@ -11,6 +11,17 @@
 //
 //randomize();
 
+//
+// restart global values (since values may be reassigned after room_restart call,
+// but before the end Mole Boy's end step event.
+//
+global.speedChange = false;
+global.rockSlowDown = outsideRockSpeed;
+global.currentExcavationSpeed = 1;
+global.layerSpeed = floor(startingLayerSpeed);
+global.currentDepth = 0;
+global.currentExcavationWinnings = 0;
+global.newWinnings = 0;
 
 //
 // values for changing speed
@@ -25,8 +36,6 @@ boundaryWidth = 16;  // for obj_boundary measure
 // values that alter score/money
 //
 scoreMultiplier = 0.25 * global.currentExcavationSpeed;
-moneyTotal = 0;
-currWinnings = 0;
 
 //
 // values for spawning rocks

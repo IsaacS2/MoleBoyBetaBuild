@@ -3,9 +3,9 @@
 //
 // add to money total!
 //
-if (currWinnings > 0) {
-	currWinnings--;
-	moneyTotal++;  // finally, currWinnings values slowly added to moneyTotal
+if (global.newWinnings > 0) {
+	global.newWinnings--;
+	global.currentExcavationWinnings++;  // newWinnings values slowly added to moneyTotal
 }
 
 //

@@ -34,6 +34,7 @@
     {"name":"script_global_elements","order":3,"path":"scripts/script_global_elements/script_global_elements.yy",},
     {"name":"script_worm_movement","order":2,"path":"scripts/script_worm_movement/script_worm_movement.yy",},
     {"name":"spr_mole_boy_skinny","order":3,"path":"sprites/spr_mole_boy_skinny/spr_mole_boy_skinny.yy",},
+    {"name":"obj_init","order":11,"path":"objects/obj_init/obj_init.yy",},
     {"name":"spr_worm_bar","order":1,"path":"sprites/spr_worm_bar/spr_worm_bar.yy",},
     {"name":"spr_boundary","order":1,"path":"sprites/spr_boundary/spr_boundary.yy",},
     {"name":"spr_worm_eaten_big","order":6,"path":"sprites/spr_worm_eaten_big/spr_worm_eaten_big.yy",},
