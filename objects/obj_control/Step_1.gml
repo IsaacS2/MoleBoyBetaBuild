@@ -12,7 +12,7 @@ if (global.newWinnings > 0) {
 // game speed increased!
 //
 if (global.speedChange) {
-	scoreMultiplier = 0.25 * global.currentExcavationSpeed;
+	global.scoreIncrementVal = 0.25 * global.currentExcavationSpeed;
 	rockInc = 1 * global.currentExcavationSpeed;
 	sawInc = 1 * global.currentExcavationSpeed;
 	wormInc = 1 * global.currentExcavationSpeed;

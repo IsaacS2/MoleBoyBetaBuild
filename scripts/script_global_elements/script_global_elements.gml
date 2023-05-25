@@ -2,6 +2,7 @@
 #macro insideRockSpeed 2
 #macro excavationSpeedIncrementVal 0.5
 #macro moleBoySpeedIncrementVal 0.5
+#macro baseScoreIncrementVal 0.25
 #macro startingLayerSpeed 9
 
 //
@@ -19,6 +20,7 @@ global.layerSpeed = floor(startingLayerSpeed);
 global.currentDepth = 0;
 global.currentExcavationWinnings = 0;
 global.newWinnings = 0;
+global.scoreIncrementVal = baseScoreIncrementVal * global.currentExcavationSpeed;
 
 function func_initialize_globals() {
 	global.gamePaused = false;
@@ -31,6 +33,7 @@ function func_initialize_globals() {
 	global.currentDepth = 0;
 	global.currentExcavationWinnings = 0;
 	global.newWinnings = 0;
+	global.scoreIncrementVal = baseScoreIncrementVal * global.currentExcavationSpeed;
 }
 
 function func_reset_excavation() {

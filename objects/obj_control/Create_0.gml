@@ -24,12 +24,6 @@ func_initialize_globals();
 lay_id = layer_get_id("Background");
 boundaryWidth = 16;  // for obj_boundary measure
 
-
-//
-// values that alter score/money
-//
-scoreMultiplier = 0.25 * global.currentExcavationSpeed;
-
 //
 // values for spawning rocks
 //

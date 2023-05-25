@@ -68,7 +68,7 @@ if (inRock && !place_meeting(x, y, obj_rock_obstacle)
 //
 // Time to add to depth
 //
-global.currentDepth += (obj_control.scoreMultiplier / global.rockSlowDown);
+global.currentDepth += (global.scoreIncrementVal / global.rockSlowDown);
 
 //
 // Time to calculate worm count
