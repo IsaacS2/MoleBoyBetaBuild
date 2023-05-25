@@ -20,14 +20,14 @@ keyPower = keyboard_check(ord("C"));
 if (global.speedChange) {  // game speed updated
 	wormDecreaseTime = round(originalWormDecreaseTime / global.currentExcavationSpeed);
 }
-if (newMoleSpeed < obj_control.moleBoySpeed) {  // Mole Boy speed updated
+if (global.moleBoySpeedChange) {  // Mole Boy speed updated
 	movement = round(2 * obj_control.moleBoySpeed);  // Increase base movement
 	directionInc = round(2 * obj_control.moleBoySpeed);  // Increase traction movement
 	noInputInc = round(1 * obj_control.moleBoySpeed);  // Increase rate MB stops moving without input
 	maxMomentum = round(6 * obj_control.moleBoySpeed) * slip;
 	currMovement = movement;
 	endStall = ceil(5 / obj_control.moleBoySpeed);  // decrease amount of time MB is in the middle of the screen during his drill attack
-	newMoleSpeed = obj_control.moleBoySpeed;
+	global.moleBoySpeedChange = false;
 }
 
 //

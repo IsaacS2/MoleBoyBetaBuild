@@ -50,7 +50,6 @@ drilling = false;
 stalling = false;
 returning = false;
 inRock = false;
-newMoleSpeed = 1;
 
 //
 // Location values

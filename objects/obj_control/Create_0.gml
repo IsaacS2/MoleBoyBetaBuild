@@ -15,13 +15,7 @@
 // restart global values (since values may be reassigned after room_restart call,
 // but before the end Mole Boy's end step event.
 //
-global.speedChange = false;
-global.rockSlowDown = outsideRockSpeed;
-global.currentExcavationSpeed = 1;
-global.layerSpeed = floor(startingLayerSpeed);
-global.currentDepth = 0;
-global.currentExcavationWinnings = 0;
-global.newWinnings = 0;
+func_initialize_globals();
 
 //
 // values for changing speed
