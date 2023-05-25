@@ -36,3 +36,25 @@ function func_movement(_obj, _direction, _maxDist){
 		return 0;  // Mole Boy is right beside the boundary and will not move horizontally
 	}
 }
+
+// Script assets have changed for v2.3.0 see
+// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+function func_neutral_movement() {
+	
+}
+
+function func_drilling_movement() {
+	
+}
+
+function func_stalling_movement() {
+	
+}
+
+function func_returning_movement() {
+	
+}
+
+function func_in_rock_movement() {
+	
+}
