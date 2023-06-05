@@ -54,20 +54,10 @@ if (keyAttack && canDrill) { // Drilling time!
 //
 // for bringing Mole Boy back to top of screen after drill attack
 if (drillStallCnt >= endStall) {
-	stalling = false;
-	drilling = false;  // Mole Boy is vulnerable
-	drillCnt = 0;
-	drillStallCnt = 0;
-	returning = true;
-	sprite_index = spr_mole_boy;
+	func_switchTo_returning();
 }
 if (returning) {
-	y -= returnY; // Mole Boy moving back to top of the screen
-	if (y <= startY) {  // object height / 2, top of screen
-		y = startY;
-		returning = false;
-		canDrill = true; // back to status quo
-	}
+	func_switchFrom_returning_and_yMovement();
 }
 
 // for actual drill attack

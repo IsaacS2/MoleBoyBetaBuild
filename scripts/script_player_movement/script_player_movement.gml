@@ -101,6 +101,25 @@ function func_momentumOnly_movement() {
 }
 
 
+function func_switchTo_returning() {
+	stalling = false;
+	drilling = false;  // Mole Boy is vulnerable
+	drillCnt = 0;
+	drillStallCnt = 0;
+	returning = true;
+	sprite_index = spr_mole_boy;
+}
+
+
+function func_switchFrom_returning_and_yMovement() {
+	y -= returnY; // Mole Boy moving back to top of the screen
+	if (y <= startY) {  // object height / 2, top of screen
+		y = startY;
+		returning = false;
+		canDrill = true; // back to status quo
+	}
+}
+
 /*
 function func_destroy_rock() {
 	while (place_meeting(x, y, obj_rock_obstacle)) {
