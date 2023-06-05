@@ -120,6 +120,28 @@ function func_switchFrom_returning_and_yMovement() {
 	}
 }
 
+
+function func_switchTo_inRock() {
+	sprite_set_speed(sprite_index, 30, spritespeed_framespersecond);
+	inRock = true;
+	momentum = 0;
+	image_angle = 0;
+	movement = floor (movement / 2);
+	global.rockSlowDown = insideRockSpeed;
+	// For altering background speed
+	layer_vspeed(obj_control.lay_id, -floor(global.layerSpeed / global.rockSlowDown));
+}
+
+
+function func_switchFrom_inRock() {
+	inRock = false;
+	sprite_set_speed(sprite_index, 60, spritespeed_framespersecond);
+	movement = currMovement;
+	global.rockSlowDown = outsideRockSpeed;
+	// For returning background speed to normal
+	layer_vspeed(obj_control.lay_id, -floor(global.layerSpeed / global.rockSlowDown));
+}
+
 /*
 function func_destroy_rock() {
 	while (place_meeting(x, y, obj_rock_obstacle)) {

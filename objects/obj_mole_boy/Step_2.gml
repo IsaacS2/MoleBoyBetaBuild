@@ -42,14 +42,7 @@ if ( place_meeting(x, y, obj_rock_obstacle) || place_meeting(x, y, obj_big_rock_
 			instance_destroy(instance_nearest(x, y, obj_big_rock_obstacle));
 		}
 	} else if (!inRock) {  // digging through rock slowly
-		sprite_set_speed(sprite_index, 30, spritespeed_framespersecond);
-		inRock = true;
-		momentum = 0;
-		image_angle = 0;
-		movement = floor (movement / 2);
-		global.rockSlowDown = insideRockSpeed;
-		// For altering background speed
-		layer_vspeed(obj_control.lay_id, -floor(global.layerSpeed / global.rockSlowDown));
+		func_switchTo_inRock();
 	}
 } 
 //
@@ -57,12 +50,7 @@ if ( place_meeting(x, y, obj_rock_obstacle) || place_meeting(x, y, obj_big_rock_
 //
 if (inRock && !place_meeting(x, y, obj_rock_obstacle) 
 	&& !place_meeting(x, y, obj_big_rock_obstacle) ) {
-	inRock = false;
-	sprite_set_speed(sprite_index, 60, spritespeed_framespersecond);
-	movement = currMovement;
-	global.rockSlowDown = outsideRockSpeed;
-	// For returning background speed to normal
-	layer_vspeed(obj_control.lay_id, -floor(global.layerSpeed / global.rockSlowDown));
+	func_switchFrom_inRock();
 }
 
 
