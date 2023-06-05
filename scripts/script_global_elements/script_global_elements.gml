@@ -4,6 +4,9 @@
 #macro moleBoySpeedIncrementVal 0.5
 #macro baseScoreIncrementVal 0.25
 #macro startingLayerSpeed 9
+#macro beginStepVal 0
+#macro stepVal 1
+#macro endStepVal 2
 
 //
 // global variables

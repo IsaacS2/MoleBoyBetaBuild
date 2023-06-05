@@ -30,6 +30,11 @@ if (global.moleBoySpeedChange) {  // Mole Boy speed updated
 	global.moleBoySpeedChange = false;
 }
 
+
+//
+// currStep = beginStepVal;
+//
+// state(currStep);
 //
 // Now, input needs to be checked for down drill and power-up
 //
@@ -57,7 +62,6 @@ if (keyAttack && canDrill) { // Drilling time!
 //
 // Next, have main character move (down-drill attack first)
 //
-
 // for bringing Mole Boy back to top of screen after drill attack
 if (drillStallCnt >= endStall) {
 	stalling = false;
@@ -88,7 +92,6 @@ if stalling {
 	drillStallCnt++; // keeps Mole Boy at max attack depth for a few steps
 }
 
-
 //
 // x-movement code
 //
@@ -96,7 +99,6 @@ if stalling {
 // when Mole Boy is not drilling, as drilling will set momentum to zero and stop
 // Mole Boy's x movement altogether.
 //
-
 // moving right (and not holding left)
 if (keyRight && !keyLeft && !drilling) {
 	right = 1; // confirms player direction held

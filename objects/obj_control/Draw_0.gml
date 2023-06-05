@@ -1,5 +1,6 @@
 /// @description Draw dirt!
 
+// if neutral or in a rock
 if (!obj_mole_boy.drilling && !obj_mole_boy.returning) {  // default Mole Boy y-location
 	i = dirtSpawnCnt * 8;  // simulates movement by using dirtSpawnCnt to determine where dirt sprites are
 	while (i <= maxDirtDistance) {  // will draw dirt starting from highest y-value

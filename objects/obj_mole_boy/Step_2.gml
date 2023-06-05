@@ -21,6 +21,12 @@ if (place_meeting(x, y, obj_saw_obstacle)) {
 }
 
 //
+// currStep = endStepVal;
+//
+// state(currStep);
+//
+
+//
 // rock collision
 //
 // The status "destroyed" for regular rocks is checked to set destroyed
