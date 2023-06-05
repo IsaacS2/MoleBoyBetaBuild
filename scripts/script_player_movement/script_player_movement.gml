@@ -37,6 +37,24 @@ function func_movement(_obj, _direction, _maxDist){
 	}
 }
 
+function func_switchTo_drilling() {
+	image_angle = 0;
+	drilling = true;
+	sprite_index = spr_mole_boy_drilling_red;
+	right = 0;  // no more x-movement
+	momentum = 0;  // no more momentum
+	canDrill = false;
+}
+
+function func_destroy_rocks() {
+	while (place_meeting(x, y, obj_rock_obstacle)) {
+		rock = instance_nearest(x, y, obj_rock_obstacle)
+		instance_create_depth(rock.x, rock.y, 0, obj_rock_broken);  // new broken rock that plays animation
+		instance_destroy(instance_nearest(x, y, obj_rock_obstacle));
+		global.newWinnings += rockCash;
+	}
+}
+
 /*
 function func_destroy_rock() {
 	while (place_meeting(x, y, obj_rock_obstacle)) {
