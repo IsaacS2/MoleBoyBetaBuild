@@ -8,6 +8,7 @@
 //
 global.gamePaused = false;
 
+
 function func_movement(_obj, _direction, _maxDist){
 	var i = _maxDist;
 	while (i >= 1) {
@@ -37,6 +38,7 @@ function func_movement(_obj, _direction, _maxDist){
 	}
 }
 
+
 function func_switchTo_drilling() {
 	image_angle = 0;
 	drilling = true;
@@ -46,6 +48,7 @@ function func_switchTo_drilling() {
 	canDrill = false;
 }
 
+
 function func_destroy_rocks() {
 	while (place_meeting(x, y, obj_rock_obstacle)) {
 		rock = instance_nearest(x, y, obj_rock_obstacle)
@@ -54,6 +57,49 @@ function func_destroy_rocks() {
 		global.newWinnings += rockCash;
 	}
 }
+
+
+function func_right_movement() {
+	right = 1; // confirms player direction held
+	if (momentum < maxMomentum && !inRock) { // momentum can be increased
+		momentum = min((momentum + directionInc), maxMomentum); // we don't want anything above maxMomentum
+	}
+	//
+	// In case momentum is larger and opposite to movement value, the sign of the
+	// sum will be used to determine when/where Mole Boy is moving and what collisions to
+	// watch out for. 
+	//
+	// image is rotated slighty to enhance feeling of movement
+	image_angle = momentum * 2;
+	func_movement(obj_mole_boy, sign(movement + momentum), abs(movement + momentum));
+}
+
+
+function func_left_movement() {
+	right = -1;
+	if (momentum > -maxMomentum && !inRock) { // momentum can be lowered (as in, influencing left mvmt)
+		// don't want anything below -maxMomentum
+		momentum = max((momentum - directionInc), -maxMomentum);
+	}
+	image_angle = momentum * 2;
+	func_movement(obj_mole_boy, sign(-movement + momentum), abs(-movement + momentum));
+}
+
+
+function func_momentumOnly_movement() {
+	right = 0;
+	if (momentum > 0) { // leftover momentum from right movement
+		momentum = max((momentum - noInputInc), 0); // don't want to go below zero
+		image_angle = momentum * 2;
+		func_movement(obj_mole_boy, sign(momentum), abs(momentum)); // only momentum alters x
+	}
+	else if (momentum < 0) { // leftover momentum from left movement
+		momentum = min((momentum + noInputInc), 0); // don't want to go above zero
+		image_angle = momentum * 2;
+		func_movement(obj_mole_boy, sign(momentum), abs(momentum));
+	}
+}
+
 
 /*
 function func_destroy_rock() {

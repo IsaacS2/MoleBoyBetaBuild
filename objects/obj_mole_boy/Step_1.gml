@@ -91,41 +91,14 @@ if stalling {
 //
 // moving right (and not holding left)
 if (keyRight && !keyLeft && !drilling) {
-	right = 1; // confirms player direction held
-	if (momentum < maxMomentum && !inRock) { // momentum can be increased
-		momentum = min((momentum + directionInc), maxMomentum); // we don't want anything above maxMomentum
-	}
-	//
-	// In case momentum is larger and opposite to movement value, the sign of the
-	// sum will be used to determine when/where Mole Boy is moving and what collisions to
-	// watch out for. 
-	//
-	// image is rotated slighty to enhance feeling of movement
-	image_angle = momentum * 2;
-	func_movement(obj_mole_boy, sign(movement + momentum), abs(movement + momentum));
+	func_right_movement();
 }
 // moving left (and not holding right)
 else if (!keyRight && keyLeft && !drilling) {
-	right = -1;
-	if (momentum > -maxMomentum && !inRock) { // momentum can be lowered (as in, influencing left mvmt)
-		// don't want anything below -maxMomentum
-		momentum = max((momentum - directionInc), -maxMomentum);
-	}
-	image_angle = momentum * 2;
-	func_movement(obj_mole_boy, sign(-movement + momentum), abs(-movement + momentum));
+	func_left_movement();
 } 
 // not moving (simulates momentum in controls by SLOWLY stopping Mole Boy when
 // there's no input and a direction was held previously)
 else if ((keyLeft == keyRight) && !drilling && !inRock) {
-	right = 0;
-	if (momentum > 0) { // leftover momentum from right movement
-		momentum = max((momentum - noInputInc), 0); // don't want to go below zero
-		image_angle = momentum * 2;
-		func_movement(obj_mole_boy, sign(momentum), abs(momentum)); // only momentum alters x
-	}
-	else if (momentum < 0) { // leftover momentum from left movement
-		momentum = min((momentum + noInputInc), 0); // don't want to go above zero
-		image_angle = momentum * 2;
-		func_movement(obj_mole_boy, sign(momentum), abs(momentum));
-	}
+	func_momentumOnly_movement();
 }
