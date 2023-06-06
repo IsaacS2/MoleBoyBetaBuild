@@ -25,7 +25,7 @@ if (global.moleBoySpeedChange) {  // Mole Boy speed updated
 	directionInc = round(2 * global.currentMoleBoySpeed);  // Increase traction movement
 	noInputInc = round(1 * global.currentMoleBoySpeed);  // Increase rate MB stops moving without input
 	maxMomentum = round(6 * global.currentMoleBoySpeed) * slip;
-	currMovement = movement;
+	normalMovement = movement;
 	endStall = ceil(5 / global.currentMoleBoySpeed);  // decrease amount of time MB is in the middle of the screen during his drill attack
 	global.moleBoySpeedChange = false;
 }

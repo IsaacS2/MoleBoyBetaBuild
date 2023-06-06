@@ -8,16 +8,12 @@
 //
 // method variables for state machine
 //
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-//
 // func_neutral_state
 //
 // This method performs movement actions and variable changes when Mole Boy
 // is in the neutral state (not in the process of attacking,
 // can move freely).
 //
-
 func_neutral_state = function(_step) {
 	if (_step == beginStepVal) {
 		if (keyAttack) { // Drilling time!
@@ -94,7 +90,7 @@ func_returning_state = function(_step) {
 
 slip = 1;  // for diiferent environment changes
 movement = 2;
-currMovement = movement;  // unchanged variabled that is used to return movement to original value
+normalMovement = movement;  // unchanged variable that is used to return movement to original value
 right = 0;
 startY = 96;
 powerUp1 = 0;
@@ -129,13 +125,6 @@ wormDecreaseTime = 15;  // Determines the amount of frames until worm meter is u
 originalWormDecreaseTime = wormDecreaseTime;
 wormEatenBoost = round(wormMeterMax / 2);
 
-canDrill = true;
-drilling = false;
-stalling = false;
-returning = false;
-
-//
-// Mole Boy states and speed values
 //
 // Thanks to Shaun Spalding for state machine explanation from
 // "State Machines in GameMaker Studio 2" youtube video
@@ -143,6 +132,8 @@ returning = false;
 //
 currStep = beginStepVal;  // for checking the current step of Mole Boy
 state = func_neutral_state;
+normalSprite = spr_mole_boy;
+attackingSprite = spr_mole_boy_drilling_red;
 
 //
 // Location values
