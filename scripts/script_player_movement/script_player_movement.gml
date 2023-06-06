@@ -61,7 +61,7 @@ function func_destroy_rocks() {
 
 function func_right_movement() {
 	right = 1; // confirms player direction held
-	if (momentum < maxMomentum && !inRock) { // momentum can be increased
+	if (momentum < maxMomentum && (global.rockSlowDown & outsideRockSpeed)) { // momentum can be increased
 		momentum = min((momentum + directionInc), maxMomentum); // we don't want anything above maxMomentum
 	}
 	//
@@ -77,7 +77,7 @@ function func_right_movement() {
 
 function func_left_movement() {
 	right = -1;
-	if (momentum > -maxMomentum && !inRock) { // momentum can be lowered (as in, influencing left mvmt)
+	if (momentum > -maxMomentum && (global.rockSlowDown & outsideRockSpeed)) { // momentum can be lowered (as in, influencing left mvmt)
 		// don't want anything below -maxMomentum
 		momentum = max((momentum - directionInc), -maxMomentum);
 	}
@@ -97,6 +97,19 @@ function func_momentumOnly_movement() {
 		momentum = min((momentum + noInputInc), 0); // don't want to go above zero
 		image_angle = momentum * 2;
 		func_movement(obj_mole_boy, sign(momentum), abs(momentum));
+	}
+}
+
+
+function func_left_and_right_movement() {
+	if (keyRight && !keyLeft) {
+		func_right_movement();
+	}
+	else if (!keyRight && keyLeft) {
+		func_left_movement();
+	} 
+	else if ( (keyLeft == keyRight) && (global.rockSlowDown & outsideRockSpeed)) {
+		func_momentumOnly_movement();
 	}
 }
 
@@ -123,7 +136,7 @@ function func_switchFrom_returning_and_yMovement() {
 
 function func_switchTo_inRock() {
 	sprite_set_speed(sprite_index, 30, spritespeed_framespersecond);
-	inRock = true;
+	//inRock = true;
 	momentum = 0;
 	image_angle = 0;
 	movement = floor (movement / 2);
@@ -134,7 +147,7 @@ function func_switchTo_inRock() {
 
 
 function func_switchFrom_inRock() {
-	inRock = false;
+	//inRock = false;
 	sprite_set_speed(sprite_index, 60, spritespeed_framespersecond);
 	movement = currMovement;
 	global.rockSlowDown = outsideRockSpeed;

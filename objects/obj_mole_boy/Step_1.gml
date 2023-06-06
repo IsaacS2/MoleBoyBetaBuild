@@ -31,13 +31,17 @@ if (global.moleBoySpeedChange) {  // Mole Boy speed updated
 }
 
 
-//
-// currStep = beginStepVal;
-//
-// state(currStep);
+currStep = beginStepVal;
+state(currStep);
+
+
+
+
 //
 // Now, input needs to be checked for down drill and power-up
 //
+
+/*
 if (keyAttack && canDrill) { // Drilling time!
 	func_switchTo_drilling();
 	func_destroy_rocks();
@@ -89,6 +93,7 @@ else if (!keyRight && keyLeft && !drilling) {
 } 
 // not moving (simulates momentum in controls by SLOWLY stopping Mole Boy when
 // there's no input and a direction was held previously)
-else if ((keyLeft == keyRight) && !drilling && !inRock) {
+else if ( (keyLeft == keyRight) && !drilling && (global.rockSlowDown & outsideRockSpeed)) {
 	func_momentumOnly_movement();
 }
+*/

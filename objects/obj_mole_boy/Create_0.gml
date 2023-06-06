@@ -14,19 +14,19 @@
 // func_neutral_state
 //
 // This method performs movement actions and variable changes when Mole Boy
-// is in the neutral state (not in a rock, not in the process of acting,
+// is in the neutral state (not in the process of attacking,
 // can move freely).
 //
-/*
+
 func_neutral_state = function(_step) {
 	if (_step == beginStepVal) {
-		func_attack_input_movement();
-		func_direction_input_movement();
-	} 
-	else if (_step == endStepVal) {
-		if ( place_meeting(x, y, obj_rock_obstacle) || place_meeting(x, y, obj_big_rock_obstacle) ) {
-			func_enter_rock();
+		if (keyAttack) { // Drilling time!
+			func_switchTo_drilling();
+			state = func_drilling_state;
+			state(_step);
+			exit;
 		}
+		func_left_and_right_movement();
 	}
 }
 
@@ -39,12 +39,17 @@ func_neutral_state = function(_step) {
 // to the top of the screen).
 //
 func_drilling_state = function(_step) {
+	func_destroy_rocks();
+	if (place_meeting(x, y, obj_big_rock_obstacle)) {
+		instance_destroy(instance_nearest(x, y, obj_big_rock_obstacle));
+	}
 	if (_step == beginStepVal) {
 		if (drillCnt < endDrill) {
 			y += drillY; // Mole Boy's drilling downwards
 			drillCnt++;
-		} else if (drillCnt >= endDrill && drillStallCnt < endStall) {
+		} else {
 			state = func_stalling_state;
+			state(_step);
 		}
 	}
 }
@@ -57,7 +62,16 @@ func_drilling_state = function(_step) {
 // is drilling downwards with no vertical speed (stalling).
 //
 func_stalling_state = function(_step) {
-	
+	func_destroy_rocks();
+	if (_step == beginStepVal) {
+		if (drillStallCnt >= endStall) {
+			func_switchTo_returning();
+			state = func_returning_state;
+			state(_step);
+			exit;
+		}
+		drillStallCnt++;
+	}
 }
 
 
@@ -68,23 +82,15 @@ func_stalling_state = function(_step) {
 // is returning to the top of the screen after a drilling attack.
 //
 func_returning_state = function(_step) {
-	
-}
-
-
-//
-// func_in_rock_state
-//
-// This method performs movement actions and variable changes when Mole Boy
-// is in a rock without performing a drill attack (inRock)
-//
-func_in_rock_state = function(_step) {
 	if (_step == beginStepVal) {
-		func_attack_input_movement();
-		func_direction_input_movement();
-	} 
+		func_switchFrom_returning_and_yMovement();
+		if (y == startY) {
+			state = func_neutral_state;
+		}
+		func_left_and_right_movement();
+	}
 }
-*/
+
 
 slip = 1;  // for diiferent environment changes
 movement = 2;
@@ -123,6 +129,11 @@ wormDecreaseTime = 15;  // Determines the amount of frames until worm meter is u
 originalWormDecreaseTime = wormDecreaseTime;
 wormEatenBoost = round(wormMeterMax / 2);
 
+canDrill = true;
+drilling = false;
+stalling = false;
+returning = false;
+
 //
 // Mole Boy states and speed values
 //
@@ -130,13 +141,8 @@ wormEatenBoost = round(wormMeterMax / 2);
 // "State Machines in GameMaker Studio 2" youtube video
 // https://www.youtube.com/watch?v=yfFzz9mZkU4
 //
-canDrill = true;
-drilling = false;
-stalling = false;
-returning = false;
-inRock = false;
-//currStep = beginStepVal;  // for checking the current step of Mole Boy
-//state = func_neutral_state;
+currStep = beginStepVal;  // for checking the current step of Mole Boy
+state = func_neutral_state;
 
 //
 // Location values
