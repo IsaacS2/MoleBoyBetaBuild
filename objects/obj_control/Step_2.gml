@@ -1,13 +1,13 @@
 /// @description Spawn rocks and stuff!
-rockCnt += rockInc / global.rockSlowDown;
+rockCnt += rockIncVal / global.rockSlowDown;
 
 // rock will be spawned down now
-if (rockCnt >= rockSpawner) {
-	instance_create_depth(rockLocation, room_height + 48, 1, obj_rock_obstacle);
+if (rockCnt >= rockSpawnTime) {
+	instance_create_depth(rockX, room_height + 48, 1, obj_rock_obstacle);
 	rockCnt = 0;
-	rockSpawner = irandom_range(minRockTimer, maxRockTimer);
+	rockSpawnTime = irandom_range(minRockSpawnTime, maxRockSpawnTime);
 	// randomize rock timing again
-	rockLocation = irandom_range(minRockX, maxRockX);
+	rockX = irandom_range(minRockX, maxRockX);
 	// randomize next rock x-value location again
 }
 
@@ -18,15 +18,15 @@ if (keyboard_check_pressed(ord("R"))) {
 //
 // spawn saws!
 //
-sawCnt += sawInc / global.rockSlowDown;
+sawCnt += sawIncVal / global.rockSlowDown;
 
 // saw will be spawned down now
-if (sawCnt >= sawSpawner) {
-	instance_create_depth(sawLocation, room_height + 48, 0, obj_saw_obstacle);
+if (sawCnt >= sawSpawnTime) {
+	instance_create_depth(sawX, room_height + 48, 0, obj_saw_obstacle);
 	sawCnt = 0;
-	sawSpawner = irandom_range(minSawTimer, maxSawTimer);
+	sawSpawnTime = irandom_range(minSawSpawnTime, maxSawSpawnTime);
 	// randomize saw timing again
-	sawLocation = irandom_range(minSawX, maxSawX);
+	sawX = irandom_range(minSawX, maxSawX);
 	// randomize next saw x-value location again 
 }
 
@@ -34,12 +34,12 @@ if (sawCnt >= sawSpawner) {
 //
 // spawn worms!
 //
-wormCnt += wormInc / global.rockSlowDown;
+wormCnt += wormIncVal / global.rockSlowDown;
 
 // worm will be spawned down now
-if (wormCnt >= wormSpawner) {
-	newWorm = instance_create_depth(wormLocation, room_height + 48, 0, obj_worm);
-	if (wormLocation >= (room_width / 2) ) {
+if (wormCnt >= wormSpawnTime) {
+	newWorm = instance_create_depth(wormX, room_height + 48, 0, obj_worm);
+	if (wormX >= (room_width / 2) ) {
 		newWorm.right = -1;
 	} else {
 		newWorm.right = 1;
@@ -50,9 +50,9 @@ if (wormCnt >= wormSpawner) {
 	//
 	newWorm.image_xscale = -newWorm.right;
 	wormCnt = 0;
-	wormSpawner = irandom_range(minWormTimer, maxWormTimer);
+	wormSpawnTime = irandom_range(minWormSpawnTime, maxWormSpawnTime);
 	// randomize worm timing again
-	wormLocation = irandom_range(minWormX, maxWormX);
+	wormX = irandom_range(minWormX, maxWormX);
 	// randomize next worm x-value location again 
 }
 

@@ -27,41 +27,41 @@ boundaryWidth = 16;  // for obj_boundary measure
 //
 // values for spawning rocks
 //
-minRockTimer = 20;
-maxRockTimer = 40;
-rockSpawner = irandom_range(minRockTimer, maxRockTimer);
+minRockSpawnTime = 20;
+maxRockSpawnTime = 40;
+rockSpawnTime = irandom_range(minRockSpawnTime, maxRockSpawnTime);
 rockWidth = 40;
 minRockX = rockWidth;
 maxRockX = room_width - rockWidth;
-rockLocation = irandom_range(minRockX, maxRockX);
+rockX = irandom_range(minRockX, maxRockX);
 rockCnt = 0;
-rockInc = 1 * global.currentExcavationSpeed;  // 1 may be replaced by var that better matches desired spawn rate later in dev
+rockIncVal = 1 * global.currentExcavationSpeed;  // 1 may be replaced by var that better matches desired spawn rate later in dev
 
 //
 // values for spawning saws
 //
-minSawTimer = 40;
-maxSawTimer = 60;
-sawSpawner = irandom_range(minSawTimer, maxSawTimer);
+minSawSpawnTime = 40;
+maxSawSpawnTime = 60;
+sawSpawnTime = irandom_range(minSawSpawnTime, maxSawSpawnTime);
 sawWidth = 32;
 minSawX = sawWidth;
 maxSawX = room_width - sawWidth;
-sawLocation = irandom_range(minSawX, maxSawX);
+sawX = irandom_range(minSawX, maxSawX);
 sawCnt = 0;
-sawInc = 1 * global.currentExcavationSpeed;
+sawIncVal = 1 * global.currentExcavationSpeed;
 
 //
 // values for spawning worms
 //
-minWormTimer = 300;
-maxWormTimer = 360;
-wormSpawner = irandom_range(minWormTimer, maxWormTimer);
+minWormSpawnTime = 300;
+maxWormSpawnTime = 360;
+wormSpawnTime = irandom_range(minWormSpawnTime, maxWormSpawnTime);
 wormWidth = 64;
 minWormX = (room_width / 2) - (wormWidth);
 maxWormX = (room_width / 2) + (wormWidth);
-wormLocation = irandom_range(minWormX, maxWormX);
+wormX = irandom_range(minWormX, maxWormX);
 wormCnt = 0;
-wormInc = 1 * global.currentExcavationSpeed;
+wormIncVal = 1 * global.currentExcavationSpeed;
 
 //
 // values for spawning dug dirt patches

@@ -60,7 +60,7 @@ function func_destroy_rocks() {
 function func_right_movement() {
 	right = 1; // confirms player direction held
 	if (momentum < maxMomentum && (global.rockSlowDown & outsideRockSpeed)) { // momentum can be increased
-		momentum = min((momentum + directionInc), maxMomentum); // we don't want anything above maxMomentum
+		momentum = min((momentum + directionIncVal), maxMomentum); // we don't want anything above maxMomentum
 	}
 	//
 	// In case momentum is larger and opposite to movement value, the sign of the
@@ -77,7 +77,7 @@ function func_left_movement() {
 	right = -1;
 	if (momentum > -maxMomentum && (global.rockSlowDown & outsideRockSpeed)) { // momentum can be lowered (as in, influencing left mvmt)
 		// don't want anything below -maxMomentum
-		momentum = max((momentum - directionInc), -maxMomentum);
+		momentum = max((momentum - directionIncVal), -maxMomentum);
 	}
 	image_angle = momentum * 2;
 	func_movement(obj_mole_boy, sign(-movement + momentum), abs(-movement + momentum));
@@ -87,12 +87,12 @@ function func_left_movement() {
 function func_momentumOnly_movement() {
 	right = 0;
 	if (momentum > 0) { // leftover momentum from right movement
-		momentum = max((momentum - noInputInc), 0); // don't want to go below zero
+		momentum = max((momentum - noInputIncVal), 0); // don't want to go below zero
 		image_angle = momentum * 2;
 		func_movement(obj_mole_boy, sign(momentum), abs(momentum)); // only momentum alters x
 	}
 	else if (momentum < 0) { // leftover momentum from left movement
-		momentum = min((momentum + noInputInc), 0); // don't want to go above zero
+		momentum = min((momentum + noInputIncVal), 0); // don't want to go above zero
 		image_angle = momentum * 2;
 		func_movement(obj_mole_boy, sign(momentum), abs(momentum));
 	}
