@@ -4,10 +4,10 @@ with (obj_mole_boy) {
 	switch (state) {
 		// if neutral or in a rock
 		case (func_neutral_state):  // default Mole Boy y-location
-			i = obj_control.dirtSpawnCnt * 8;  // simulates movement by using dirtSpawnCnt to determine where dirt sprites are
-			while (i <= obj_control.maxDirtDistance) {  // will draw dirt starting from highest y-value
+			i = obj_control.currDirtYMultiple * 8;  // simulates movement by using currDirtYMultiple to determine where dirt sprites are
+			while (i <= obj_control.maxDirtYDiff) {  // will draw dirt starting from highest y-value
 				draw_sprite(spr_dirt_space, 3, obj_mole_boy.x, obj_mole_boy.y - i );
-				i += floor (obj_control.maxDirtDistance / 2);  // max of 2 dirt patches will be drawn
+				i += floor (obj_control.maxDirtYDiff / 2);  // max of 2 dirt patches will be drawn
 			}
 		break;
 		

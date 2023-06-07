@@ -10,7 +10,7 @@ if (place_meeting(x, y, obj_worm)) {
 	eatenWorm = instance_create_depth(x, y + 32, -6, obj_worm_eaten);
 	eatenWorm.image_xscale = -right;
 	// min function keeps bar from overflowing
-	wormMeterVal = min(wormMeterMax, wormMeterVal + wormEatenBoost);  // Delicious worm!
+	wormMeterVal = min(wormMeterMax, wormMeterVal + wormBoost);  // Delicious worm!
 }
 
 //
@@ -56,9 +56,9 @@ global.currentDepth += (global.scoreIncrementVal / global.rockSlowDown);
 //
 wormDecreaseCnt += global.rockSlowDown;  // for rock collision worm meter penalty
 // removing from worm meter
-if (wormDecreaseCnt >= wormDecreaseTime) {
+if (wormDecreaseCnt >= wormDecrementTime) {
 	wormDecreaseCnt = 0;
-	wormMeterVal -= wormDepletion;
+	wormMeterVal -= wormDecrementVal;
 	if (wormMeterVal <= 0) {
 		func_reset_excavation();  // DEATH
 	}

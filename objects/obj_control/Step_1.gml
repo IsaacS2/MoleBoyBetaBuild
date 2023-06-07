@@ -17,6 +17,6 @@ if (global.speedChange) {
 	sawIncVal = 1 * global.currentExcavationSpeed;
 	wormIncVal = 1 * global.currentExcavationSpeed;
 	// to prevent division by zero when speed is incredibly high
-	dirtSpawnVal = max(floor (10 / global.currentExcavationSpeed), 1);
-	maxDirtDistance = floor (96 * global.currentExcavationSpeed);
+	maxExclusiveDirtYMultiple = max(floor (10 / global.currentExcavationSpeed), 1);
+	maxDirtYDiff = floor (96 * global.currentExcavationSpeed);
 }

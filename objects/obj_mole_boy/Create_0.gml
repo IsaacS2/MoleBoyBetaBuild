@@ -115,15 +115,15 @@ rockCash = 50;
 //
 wormMeterVal = 100;
 wormMeterMax = wormMeterVal;
-wormDepletion = 1;
+wormDecrementVal = 1;
 wormBarX = 88;
 wormBarY = 26;
 wormBarHeight = 20;
 wormBarWidth = 308;
 wormDecreaseCnt = 1;
-wormDecreaseTime = 15;  // Determines the amount of frames until worm meter is updated
-originalWormDecreaseTime = wormDecreaseTime;
-wormEatenBoost = round(wormMeterMax / 2);
+wormDecrementTime = 15;  // Determines the amount of frames until worm meter is updated
+originalWormDecrementTime = wormDecrementTime;
+wormBoost = round(wormMeterMax / 2);
 
 //
 // Thanks to Shaun Spalding for state machine explanation from

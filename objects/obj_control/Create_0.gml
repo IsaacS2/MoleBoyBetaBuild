@@ -66,9 +66,9 @@ wormIncVal = 1 * global.currentExcavationSpeed;
 //
 // values for spawning dug dirt patches
 //
-dirtSpawnVal = floor(10 / global.currentExcavationSpeed);
-dirtSpawnCnt = 0;
-dirtSlowCnt = 1;  // if global.rockSlowDown is insideRockSpeed, dirt patches will be spawned every other frames cause of this var
-maxDirtDistance = floor(96 / global.currentExcavationSpeed)
+maxExclusiveDirtYMultiple = floor(10 / global.currentExcavationSpeed);
+currDirtYMultiple = 0;
+dirtSpawnDeterminant = 1;  // if global.rockSlowDown is insideRockSpeed, dirt patches will be spawned every other frames because of this var
+maxDirtYDiff = floor(96 / global.currentExcavationSpeed)
 
 depth = -1;
