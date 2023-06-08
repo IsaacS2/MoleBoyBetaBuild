@@ -1,5 +1,7 @@
 /// @description Enemy/obstacle collision, worm meter depletion
-
+if (global.gamePaused) {
+	exit;
+}
 
 //
 // worm collision
@@ -63,19 +65,3 @@ if (wormDecreaseCnt >= wormDecrementTime) {
 		func_reset_excavation();  // DEATH
 	}
 }
-
-
-
-
-/*
-if ( place_meeting(x, y, obj_rock_obstacle) || place_meeting(x, y, obj_big_rock_obstacle) ) {
-	if (drilling) {  // "destroy" rock
-		func_destroy_rocks();
-		if (place_meeting(x, y, obj_big_rock_obstacle)) {
-			instance_destroy(instance_nearest(x, y, obj_big_rock_obstacle));
-		}
-	} else if ((global.rockSlowDown & outsideRockSpeed)) {  // digging through rock slowly
-		func_switchTo_inRock();
-	}
-} 
-*/

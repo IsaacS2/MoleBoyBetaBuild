@@ -1,5 +1,7 @@
 /// @description Add dirt patches and adjust background speed!
-
+if (global.gamePaused) {
+	exit;
+}
 //
 // speed change complete
 //

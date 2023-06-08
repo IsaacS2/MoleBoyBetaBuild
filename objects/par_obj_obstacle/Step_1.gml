@@ -1,5 +1,7 @@
 /// @description SpeedUp values
-
+if (global.gamePaused) {
+	exit;
+}
 //
 // Time to speed up obstacles!
 //

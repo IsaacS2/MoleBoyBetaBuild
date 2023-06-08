@@ -1,4 +1,7 @@
 /// @description Move/destroy worm!
+if (global.gamePaused) {
+	exit;
+}
 
 x = obj_mole_boy.x;
 y = obj_mole_boy.y + 32;

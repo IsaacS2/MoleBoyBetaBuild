@@ -28,7 +28,6 @@
     {"name":"spr_dirt_space_full","order":2,"path":"sprites/spr_dirt_space_full/spr_dirt_space_full.yy",},
     {"name":"spr_rock","order":1,"path":"sprites/spr_rock/spr_rock.yy",},
     {"name":"obj_boundary","order":1,"path":"objects/obj_boundary/obj_boundary.yy",},
-    {"name":"obj_pause","order":10,"path":"objects/obj_pause/obj_pause.yy",},
     {"name":"spr_mole_boy_drilling","order":4,"path":"sprites/spr_mole_boy_drilling/spr_mole_boy_drilling.yy",},
     {"name":"rm_init","order":1,"path":"rooms/rm_init/rm_init.yy",},
     {"name":"script_global_elements","order":3,"path":"scripts/script_global_elements/script_global_elements.yy",},

@@ -14,6 +14,9 @@ keyDown = keyboard_check(vk_down);
 keyAttack = keyboard_check(vk_space);
 keyPower = keyboard_check(ord("C"));
 
+if (global.gamePaused) {
+	exit;
+}
 //
 // Second, update variables due to game speed up or mole boy speed up
 //

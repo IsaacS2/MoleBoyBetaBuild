@@ -1,5 +1,4 @@
 /// @description Obstacle stats!
-
 //
 // Game By Isaac Sanchez
 // Started Summer 2022

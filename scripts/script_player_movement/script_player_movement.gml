@@ -1,14 +1,5 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-
-//
-// global variables
-//
-// Global variable pause mechanic from https://www.youtube.com/watch?v=JwWuZXyTzN0&t=1426s
-//
-global.gamePaused = false;
-
-
 function func_movement(_obj, _direction, _maxDist){
 	var i = _maxDist;
 	while (i >= 1) {

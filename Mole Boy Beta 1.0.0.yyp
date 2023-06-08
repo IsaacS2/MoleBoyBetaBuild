@@ -48,7 +48,6 @@
     {"id":{"name":"spr_rock","path":"sprites/spr_rock/spr_rock.yy",},},
     {"id":{"name":"spr_big_rock","path":"sprites/spr_big_rock/spr_big_rock.yy",},},
     {"id":{"name":"obj_boundary","path":"objects/obj_boundary/obj_boundary.yy",},},
-    {"id":{"name":"obj_pause","path":"objects/obj_pause/obj_pause.yy",},},
     {"id":{"name":"spr_mole_boy_drilling","path":"sprites/spr_mole_boy_drilling/spr_mole_boy_drilling.yy",},},
     {"id":{"name":"rm_init","path":"rooms/rm_init/rm_init.yy",},},
     {"id":{"name":"script_global_elements","path":"scripts/script_global_elements/script_global_elements.yy",},},

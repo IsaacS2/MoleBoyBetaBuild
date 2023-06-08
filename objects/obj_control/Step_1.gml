@@ -1,5 +1,7 @@
 /// @description global.currentExcavationSpeed and others!
-
+if (global.gamePaused) {
+	exit;
+}
 //
 // add to money total!
 //

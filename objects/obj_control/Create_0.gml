@@ -1,6 +1,5 @@
 /// @description Basic stats and values for the game!
 
-
 //
 // Game By Isaac Sanchez
 // Started Summer 2022

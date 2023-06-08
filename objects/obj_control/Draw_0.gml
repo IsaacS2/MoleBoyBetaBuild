@@ -1,5 +1,4 @@
 /// @description Draw dirt!
-
 with (obj_mole_boy) {
 	switch (state) {
 		// if neutral or in a rock
