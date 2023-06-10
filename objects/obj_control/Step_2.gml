@@ -13,7 +13,10 @@ if (!global.gamePaused) {
 	}
 
 	if (keyboard_check_pressed(ord("R"))) {
+		func_delete_score();
+		func_save_game();
 		func_reset_excavation();
+		exit;
 	}
 
 	//

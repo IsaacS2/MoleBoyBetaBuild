@@ -19,7 +19,9 @@ if (place_meeting(x, y, obj_worm)) {
 // saw collision
 //
 if (place_meeting(x, y, obj_saw_obstacle)) {
-	func_reset_excavation();
+	func_save_game();
+	func_reset_excavation();  // DEATH
+	exit;
 }
 
 currStep = endStepVal;
@@ -62,6 +64,8 @@ if (wormDecreaseCnt >= wormDecrementTime) {
 	wormDecreaseCnt = 0;
 	wormMeterVal -= wormDecrementVal;
 	if (wormMeterVal <= 0) {
-		func_reset_excavation();  // DEATH
+		func_save_game();
+		func_reset_excavation();  // HUNGRY
+		exit;
 	}
 }
