@@ -2,7 +2,7 @@
 
 Title: Mole Boy
 
-Creator: Isaac Sanchez
+Creator: Isaac
 
 Code: Uses GameMaker Studio 2's GML (GameMaker Language).
 
