@@ -23,3 +23,5 @@ with (obj_mole_boy) {
 		break;
 	}
 }
+
+	

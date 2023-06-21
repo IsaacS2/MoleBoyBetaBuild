@@ -103,7 +103,7 @@ drillY = 67;
 drillCnt = 0;
 drillStallCnt = 0;
 endDrill = 5;
-endStall = 5;
+endStall = 60;
 returnY = room_height / 64;
 rockCash = 50;
 
@@ -134,6 +134,8 @@ currStep = beginStepVal;  // for checking the current step of Mole Boy
 state = func_neutral_state;
 normalSprite = spr_mole_boy;
 attackingSprite = spr_mole_boy_drilling_red;
+topDrillSprite = spr_mole_boy_front_drill_residue;
+bottomDrillSprite = spr_mole_boy_back_drill_residue;
 
 //
 // Location values
