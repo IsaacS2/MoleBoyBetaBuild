@@ -32,7 +32,7 @@ function func_movement(_obj, _direction, _maxDist){
 
 function func_switchTo_drilling() {
 	image_angle = 0;
-	sprite_index = attackingSprite;
+	currentSprite = attackingSprite;
 	right = 0;  // no more x-movement
 	momentum = 0;  // no more momentum
 }
@@ -59,7 +59,7 @@ function func_right_movement() {
 	// watch out for. 
 	//
 	// image is rotated slighty to enhance feeling of movement
-	image_angle = momentum * 2;
+	image_angle = momentum * angleMultiplier;
 	func_movement(obj_mole_boy, sign(movement + momentum), abs(movement + momentum));
 }
 
@@ -70,7 +70,7 @@ function func_left_movement() {
 		// don't want anything below -maxMomentum
 		momentum = max((momentum - directionIncVal), -maxMomentum);
 	}
-	image_angle = momentum * 2;
+	image_angle = momentum * angleMultiplier;
 	func_movement(obj_mole_boy, sign(-movement + momentum), abs(-movement + momentum));
 }
 
@@ -79,12 +79,12 @@ function func_momentumOnly_movement() {
 	right = 0;
 	if (momentum > 0) { // leftover momentum from right movement
 		momentum = max((momentum - noInputIncVal), 0); // don't want to go below zero
-		image_angle = momentum * 2;
+		image_angle = momentum * angleMultiplier;
 		func_movement(obj_mole_boy, sign(momentum), abs(momentum)); // only momentum alters x
 	}
 	else if (momentum < 0) { // leftover momentum from left movement
 		momentum = min((momentum + noInputIncVal), 0); // don't want to go above zero
-		image_angle = momentum * 2;
+		image_angle = momentum * angleMultiplier;
 		func_movement(obj_mole_boy, sign(momentum), abs(momentum));
 	}
 }
@@ -106,7 +106,7 @@ function func_left_and_right_movement() {
 function func_switchTo_returning() {
 	drillCnt = 0;
 	drillStallCnt = 0;
-	sprite_index = normalSprite;
+	currentSprite = normalSprite;
 }
 
 

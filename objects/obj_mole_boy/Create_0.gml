@@ -96,6 +96,7 @@ startY = 96;
 powerUp1 = 0;
 powerUp2 = 0;
 momentum = 0;
+angleMultiplier = 2;
 directionIncVal = 2;  // value used to increase/decrease Mole Boy's directional movement with input
 noInputIncVal = 1;  // value used to stop Mole Boy's directional movement without input
 maxMomentum = 6; 
@@ -103,7 +104,7 @@ drillY = 67;
 drillCnt = 0;
 drillStallCnt = 0;
 endDrill = 5;
-endStall = 60;
+endStall = 5;
 returnY = room_height / 64;
 rockCash = 50;
 
@@ -132,10 +133,11 @@ wormBoost = round(wormMeterMax / 2);
 //
 currStep = beginStepVal;  // for checking the current step of Mole Boy
 state = func_neutral_state;
-normalSprite = spr_mole_boy;
+normalSprite = spr_mole_boy_no_effects;
 attackingSprite = spr_mole_boy_drilling_red;
 topDrillSprite = spr_mole_boy_front_drill_residue;
 bottomDrillSprite = spr_mole_boy_back_drill_residue;
+currentSprite = normalSprite;
 
 //
 // Location values
