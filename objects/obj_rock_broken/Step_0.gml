@@ -3,13 +3,8 @@ if (global.gamePaused) {
 	exit;
 }
 
-func_static_obstacle_movement(floor(yMovement / global.rockSlowDown));
+func_static_obstacle_movement(floor(global.layerSpeed / global.rockSlowDown));
 
-if (y < yDelete) {
+if (y < yDelete || image_index >= 11) {
 	instance_destroy();
 }
-
-if (image_index >= 11) {
-	instance_destroy();
-}
-
