@@ -112,6 +112,13 @@ function func_switchTo_returning() {
 
 function func_switchFrom_returning_and_yMovement() {
 	y -= returnY; // Mole Boy moving back to top of the screen
+	//TODO:
+	//if (returnY > floor(startingLayerSpeed * global.currentExcavationSpeed)) {
+	//  y -= floor(startingLayerSpeed * global.currentExcavationSpeed;
+	//}
+	//else {
+	//  y -= returnY;
+	//}
 	if (y <= startY) {  // object height / 2, top of screen
 		y = startY;
 	}
