@@ -56,6 +56,7 @@
     {"name":"spr_mole_boy_front_drill_residue","order":7,"path":"sprites/spr_mole_boy_front_drill_residue/spr_mole_boy_front_drill_residue.yy",},
     {"name":"spr_saw_obstacle","order":2,"path":"sprites/spr_saw_obstacle/spr_saw_obstacle.yy",},
     {"name":"obj_worm_eaten","order":9,"path":"objects/obj_worm_eaten/obj_worm_eaten.yy",},
+    {"name":"spr_test_floor","order":3,"path":"sprites/spr_test_floor/spr_test_floor.yy",},
     {"name":"spr_money_count","order":13,"path":"sprites/spr_money_count/spr_money_count.yy",},
   ],
 }

@@ -81,6 +81,7 @@
     {"id":{"name":"spr_mole_boy_front_drill_residue","path":"sprites/spr_mole_boy_front_drill_residue/spr_mole_boy_front_drill_residue.yy",},},
     {"id":{"name":"spr_saw_obstacle","path":"sprites/spr_saw_obstacle/spr_saw_obstacle.yy",},},
     {"id":{"name":"obj_worm_eaten","path":"objects/obj_worm_eaten/obj_worm_eaten.yy",},},
+    {"id":{"name":"spr_test_floor","path":"sprites/spr_test_floor/spr_test_floor.yy",},},
     {"id":{"name":"script_player_movement","path":"scripts/script_player_movement/script_player_movement.yy",},},
     {"id":{"name":"spr_money_count","path":"sprites/spr_money_count/spr_money_count.yy",},},
     {"id":{"name":"rm_excavation","path":"rooms/rm_excavation/rm_excavation.yy",},},

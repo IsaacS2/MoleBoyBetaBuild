@@ -71,6 +71,19 @@ if (!global.gamePaused) {
 		global.currentMoleBoySpeed += 0.5;
 		global.moleBoySpeedChange = true;
 	}
+	
+	if (keyboard_check_pressed(ord("D"))) {
+		global.debug = !global.debug;
+		if (global.debug) {
+			object_set_sprite(obj_rock_obstacle, spr_test_floor);
+		}
+		else {
+			object_set_sprite(obj_rock_obstacle, spr_rock);
+		}
+		func_save_game();
+		func_reset_excavation();
+		exit;
+	}
 }
 
 

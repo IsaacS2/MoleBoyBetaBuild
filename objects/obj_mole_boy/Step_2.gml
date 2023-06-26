@@ -18,7 +18,7 @@ if (place_meeting(x, y, obj_worm)) {
 //
 // saw collision
 //
-if (place_meeting(x, y, obj_saw_obstacle)) {
+if (place_meeting(x, y, obj_saw_obstacle) && !global.debug) {
 	func_save_game();
 	func_reset_excavation();  // DEATH
 	exit;
@@ -63,9 +63,12 @@ wormDecreaseCnt += global.rockSlowDown;  // for rock collision worm meter penalt
 if (wormDecreaseCnt >= wormDecrementTime) {
 	wormDecreaseCnt = 0;
 	wormMeterVal -= wormDecrementVal;
-	if (wormMeterVal <= 0) {
+	if (wormMeterVal <= 0 && !global.debug) {
 		func_save_game();
 		func_reset_excavation();  // HUNGRY
 		exit;
+	} 
+	else if (global.debug) {
+		wormMeterVal = wormMeterMax;
 	}
 }

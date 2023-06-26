@@ -111,15 +111,26 @@ function func_switchTo_returning() {
 
 
 function func_switchFrom_returning_and_yMovement() {
-	y -= returnY; // Mole Boy moving back to top of the screen
-	//TODO:
-	//if (returnY > floor(startingLayerSpeed * global.currentExcavationSpeed)) {
-	//  y -= floor(startingLayerSpeed * global.currentExcavationSpeed;
-	//}
-	//else {
-	//  y -= returnY;
-	//}
-	if (y <= startY) {  // object height / 2, top of screen
+	// Mole Boy moving back to top of the screen
+	// TODO: Test this returning mechanic (x2 slower vertical speed when in rock)
+	// and decide whether this mechanic is better than the current mechanic.
+	/*
+	if ((global.rockSlowDown & outsideRockSpeed)) {
+	  y -= returnY;
+	}
+	else {
+	  y -= floor(returnY / 2);
+	}
+	*/
+	var layerRockSpeed = floor(global.layerSpeed / global.rockSlowDown);
+	if ((global.rockSlowDown & outsideRockSpeed) 
+	|| returnY < layerRockSpeed) {  // Mole Boy outside rock or slower than rock speed
+		y -= returnY;
+	}
+	else {
+		y -= layerRockSpeed;
+	}
+	if (y <= startY) {
 		y = startY;
 	}
 }
