@@ -1,4 +1,9 @@
 /// @description Mole Boy's stats and values!
+#macro baseMovement 2
+#macro baseDirectionIncVal 2
+#macro baseNoInputIncVal 1
+#macro baseMaxMomentum 6
+#macro baseEndStall 5
 
 //
 // Game By Isaac Sanchez
@@ -89,7 +94,7 @@ func_returning_state = function(_step) {
 
 
 slip = 1;  // for diiferent environment changes
-movement = 2;
+movement = baseMovement;
 normalMovement = movement;  // unchanged variable that is used to return movement to original value
 right = 0;
 startY = 96;
@@ -97,14 +102,14 @@ powerUp1 = 0;
 powerUp2 = 0;
 momentum = 0;
 angleMultiplier = 2;
-directionIncVal = 2;  // value used to increase/decrease Mole Boy's directional movement with input
-noInputIncVal = 1;  // value used to stop Mole Boy's directional movement without input
-maxMomentum = 6; 
+directionIncVal = baseDirectionIncVal;  // value used to increase/decrease Mole Boy's directional movement with input
+noInputIncVal = baseNoInputIncVal;  // value used to stop Mole Boy's directional movement without input
+maxMomentum = baseMaxMomentum; 
 drillY = 67;
 drillCnt = 0;
 drillStallCnt = 0;
 endDrill = 5;
-endStall = 5;
+endStall = baseEndStall;
 returnY = room_height / 64;
 rockCash = 50;
 sturdyRockCash = 100;

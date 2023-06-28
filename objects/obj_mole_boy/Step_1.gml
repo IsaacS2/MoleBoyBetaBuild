@@ -24,12 +24,12 @@ if (global.speedChange) {  // game speed updated
 	wormDecrementTime = round(originalWormDecrementTime / global.currentExcavationSpeed);
 }
 if (global.moleBoySpeedChange) {  // Mole Boy speed updated
-	movement = round(2 * global.currentMoleBoySpeed);  // Increase base movement
-	directionIncVal = round(2 * global.currentMoleBoySpeed);  // Increase traction movement
-	noInputIncVal = round(1 * global.currentMoleBoySpeed);  // Increase rate MB stops moving without input
-	maxMomentum = round(6 * global.currentMoleBoySpeed) * slip;
+	movement = round(baseMovement * global.currentMoleBoySpeed);  // Increase base movement
+	directionIncVal = round(baseDirectionIncVal * global.currentMoleBoySpeed);  // Increase traction movement
+	noInputIncVal = round(baseNoInputIncVal * global.currentMoleBoySpeed);  // Increase rate MB stops moving without input
+	maxMomentum = round(baseMaxMomentum * global.currentMoleBoySpeed) * slip;
 	normalMovement = movement;
-	endStall = ceil(5 / global.currentMoleBoySpeed);  // decrease amount of time MB is in the middle of the screen during his drill attack
+	endStall = ceil(baseEndStall / global.currentMoleBoySpeed);  // decrease amount of time MB is in the middle of the screen during his drill attack
 	global.moleBoySpeedChange = false;
 }
 
