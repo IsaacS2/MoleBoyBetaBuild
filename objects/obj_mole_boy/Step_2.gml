@@ -27,14 +27,17 @@ if (place_meeting(x, y, obj_saw_obstacle) && !global.debug) {
 currStep = endStepVal;
 state(currStep);
 
+//
+// sturdy rock collision
+//
+if (place_meeting(x, y, obj_rock_sturdy_obstacle)) {
+	func_save_game();
+	func_reset_excavation();  // DEATH
+	exit;
+}
 
 //
 // rock collision
-//
-// The status "destroyed" for regular rocks is checked to set destroyed
-// status to "true" so that rocks can play a shattering animation before
-// being destroyed.
-//
 //
 if ( (global.rockSlowDown & outsideRockSpeed) && 
 	(place_meeting(x, y, obj_rock_obstacle) || place_meeting(x, y, obj_big_rock_obstacle)) ) {

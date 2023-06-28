@@ -37,10 +37,23 @@ rockCnt = 0;
 rockIncVal = 1 * global.currentExcavationSpeed;  // 1 may be replaced by var that better matches desired spawn rate later in dev
 
 //
+// values for spawning rocks
+//
+minSturdyRockSpawnTime = 100;
+maxSturdyRockSpawnTime = 120;
+sturdyRockSpawnTime = irandom_range(minSturdyRockSpawnTime, maxSturdyRockSpawnTime);
+sturdyRockWidth = 50;  // technically half width
+minSturdyRockX = sturdyRockWidth;
+maxSturdyRockX = room_width - sturdyRockWidth;
+sturdyRockX = irandom_range(minSturdyRockX, maxSturdyRockX);
+sturdyRockCnt = 0;
+sturdyRockIncVal = 1 * global.currentExcavationSpeed;
+
+//
 // values for spawning saws
 //
-minSawSpawnTime = 40;
-maxSawSpawnTime = 60;
+minSawSpawnTime = 80;
+maxSawSpawnTime = 100;
 sawSpawnTime = irandom_range(minSawSpawnTime, maxSawSpawnTime);
 sawWidth = 32;
 minSawX = sawWidth;

@@ -7,8 +7,6 @@
 //
 // values for calculating speed
 //
-yStart = room_height + 66;
-yDelete = -66;  // -160 for big rock use
-image_speed = 0;
-
-y = yStart;
+yDelete = -72;
+image_index = 1;
+image_speed = 1;

@@ -39,6 +39,12 @@ function func_switchTo_drilling() {
 
 
 function func_destroy_rocks() {
+	while (place_meeting(x, y, obj_rock_sturdy_obstacle)) {
+		sturdyRock = instance_nearest(x, y, obj_rock_sturdy_obstacle)
+		instance_create_depth(sturdyRock.x, sturdyRock.y, 0, obj_rock_sturdy_broken);  // new broken rock that plays animation
+		instance_destroy(instance_nearest(x, y, obj_rock_sturdy_obstacle));
+		global.newWinnings += sturdyRockCash;
+	}
 	while (place_meeting(x, y, obj_rock_obstacle)) {
 		rock = instance_nearest(x, y, obj_rock_obstacle)
 		instance_create_depth(rock.x, rock.y, 0, obj_rock_broken);  // new broken rock that plays animation

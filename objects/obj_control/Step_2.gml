@@ -18,6 +18,18 @@ if (!global.gamePaused) {
 		func_reset_excavation();
 		exit;
 	}
+	
+	sturdyRockCnt += sturdyRockIncVal / global.rockSlowDown;
+
+	// sturdy rock will be spawned down now
+	if (sturdyRockCnt >= sturdyRockSpawnTime) {
+		instance_create_depth(sturdyRockX, room_height + 48, 1, obj_rock_sturdy_obstacle);
+		sturdyRockCnt = 0;
+		sturdyRockSpawnTime = irandom_range(minSturdyRockSpawnTime, maxSturdyRockSpawnTime);
+		// randomize sturdy rock timing again
+		sturdyRockX = irandom_range(minSturdyRockX, maxSturdyRockX);
+		// randomize next sturdy rock x-value location again
+	}
 
 	//
 	// spawn saws!

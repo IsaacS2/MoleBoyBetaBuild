@@ -40,6 +40,7 @@
   },
   "resources": [
     {"id":{"name":"spr_default_background","path":"sprites/spr_default_background/spr_default_background.yy",},},
+    {"id":{"name":"obj_rock_sturdy_obstacle","path":"objects/obj_rock_sturdy_obstacle/obj_rock_sturdy_obstacle.yy",},},
     {"id":{"name":"spr_worm_meter","path":"sprites/spr_worm_meter/spr_worm_meter.yy",},},
     {"id":{"name":"script_obstacle_movement","path":"scripts/script_obstacle_movement/script_obstacle_movement.yy",},},
     {"id":{"name":"spr_worm_eaten","path":"sprites/spr_worm_eaten/spr_worm_eaten.yy",},},
@@ -47,6 +48,7 @@
     {"id":{"name":"script_draw","path":"scripts/script_draw/script_draw.yy",},},
     {"id":{"name":"spr_dirt_space_full","path":"sprites/spr_dirt_space_full/spr_dirt_space_full.yy",},},
     {"id":{"name":"spr_rock","path":"sprites/spr_rock/spr_rock.yy",},},
+    {"id":{"name":"obj_rock_sturdy_broken","path":"objects/obj_rock_sturdy_broken/obj_rock_sturdy_broken.yy",},},
     {"id":{"name":"spr_big_rock","path":"sprites/spr_big_rock/spr_big_rock.yy",},},
     {"id":{"name":"obj_boundary","path":"objects/obj_boundary/obj_boundary.yy",},},
     {"id":{"name":"spr_mole_boy_drilling","path":"sprites/spr_mole_boy_drilling/spr_mole_boy_drilling.yy",},},
@@ -61,6 +63,7 @@
     {"id":{"name":"obj_mole_boy","path":"objects/obj_mole_boy/obj_mole_boy.yy",},},
     {"id":{"name":"spr_worm_eaten_big","path":"sprites/spr_worm_eaten_big/spr_worm_eaten_big.yy",},},
     {"id":{"name":"spr_dirt_space_stalling","path":"sprites/spr_dirt_space_stalling/spr_dirt_space_stalling.yy",},},
+    {"id":{"name":"spr_rock_sturdy","path":"sprites/spr_rock_sturdy/spr_rock_sturdy.yy",},},
     {"id":{"name":"spr_dirt_space_drilling","path":"sprites/spr_dirt_space_drilling/spr_dirt_space_drilling.yy",},},
     {"id":{"name":"spr_mole_boy_drilling_red","path":"sprites/spr_mole_boy_drilling_red/spr_mole_boy_drilling_red.yy",},},
     {"id":{"name":"spr_mole_boy","path":"sprites/spr_mole_boy/spr_mole_boy.yy",},},

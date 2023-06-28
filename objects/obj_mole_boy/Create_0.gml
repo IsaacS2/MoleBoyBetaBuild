@@ -107,6 +107,7 @@ endDrill = 5;
 endStall = 5;
 returnY = room_height / 64;
 rockCash = 50;
+sturdyRockCash = 100;
 
 //
 // values for creating/changing worm meter
