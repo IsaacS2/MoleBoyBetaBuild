@@ -30,7 +30,7 @@ state(currStep);
 //
 // sturdy rock collision
 //
-if (place_meeting(x, y, obj_rock_sturdy_obstacle)) {
+if (place_meeting(x, y, obj_rock_sturdy_obstacle) && !global.debug) {
 	func_save_game();
 	func_reset_excavation();  // DEATH
 	exit;
