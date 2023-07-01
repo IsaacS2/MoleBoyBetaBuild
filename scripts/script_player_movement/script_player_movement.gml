@@ -12,7 +12,7 @@ function func_movement(_obj, _direction, _maxDist){
 	if (i <= 0 && place_meeting(_obj.x, _obj.y, obj_boundary)) {
 		var j = i;
 		// must check if boundary is in front of player first
-		if (place_meeting(_obj.x + (_direction * 0.01), _obj.y, obj_boundary)) {
+		if (place_meeting(_obj.x + _direction, _obj.y, obj_boundary)) {
 			while (place_meeting(_obj.x, _obj.y, obj_boundary)) {
 				x -= _direction;
 				j += 1;
@@ -35,21 +35,29 @@ function func_switchTo_drilling() {
 	currentSprite = attackingSprite;
 	right = 0;  // no more x-movement
 	momentum = 0;  // no more momentum
+	directionIncVal = 0;
+	noInputIncVal = 0;
 }
 
 
 function func_destroy_rocks() {
 	while (place_meeting(x, y, obj_rock_sturdy_obstacle)) {
-		sturdyRock = instance_nearest(x, y, obj_rock_sturdy_obstacle)
+		var sturdyRock = instance_nearest(x, y, obj_rock_sturdy_obstacle);
 		instance_create_depth(sturdyRock.x, sturdyRock.y, 0, obj_rock_sturdy_broken);  // new broken rock that plays animation
 		instance_destroy(instance_nearest(x, y, obj_rock_sturdy_obstacle));
 		global.newWinnings += sturdyRockCash;
 	}
 	while (place_meeting(x, y, obj_rock_obstacle)) {
-		rock = instance_nearest(x, y, obj_rock_obstacle)
+		var rock = instance_nearest(x, y, obj_rock_obstacle);
 		instance_create_depth(rock.x, rock.y, 0, obj_rock_broken);  // new broken rock that plays animation
 		instance_destroy(instance_nearest(x, y, obj_rock_obstacle));
 		global.newWinnings += rockCash;
+	}
+	if (place_meeting(x, y, obj_rock_question)) {
+		var questionRock = instance_nearest(x, y, obj_rock_question);
+		instance_create_depth(questionRock.x, questionRock.y, 0, obj_rock_question_broken);  // new broken rock that plays animation
+		instance_destroy(instance_nearest(x, y, obj_rock_question));
+		powerUp1 = 1;
 	}
 }
 
@@ -112,6 +120,8 @@ function func_left_and_right_movement() {
 function func_switchTo_returning() {
 	drillCnt = 0;
 	drillStallCnt = 0;
+	directionIncVal = round(baseDirectionIncVal * global.currentMoleBoySpeed);
+	noInputIncVal = round(baseNoInputIncVal * global.currentMoleBoySpeed);
 	currentSprite = normalSprite;
 }
 

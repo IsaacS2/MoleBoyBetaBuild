@@ -30,6 +30,26 @@ if (!global.gamePaused) {
 		sturdyRockX = irandom_range(minSturdyRockX, maxSturdyRockX);
 		// randomize next sturdy rock x-value location again
 	}
+	
+	questionRockCnt += questionRockIncVal / global.rockSlowDown;
+
+	// question rock will be spawned down now
+	if (questionRockCnt >= questionRockSpawnTime) {
+		instance_create_depth(questionRockX, room_height + 48, 1, obj_question_enemy);
+		newQuestionRock = instance_create_depth(sawX, room_height + 48, 0, obj_saw_obstacle);
+		if (questionRockX < (room_width / 2) ) {
+			newQuestionRock.currRight = 1;
+			newQuestionRock.right = true;
+		} else {
+			newQuestionRock.currRight = -1;
+			newQuestionRock.right = false;
+		}
+		questionRockCnt = 0;
+		questionRockSpawnTime = irandom_range(minQuestionRockSpawnTime, maxQuestionRockSpawnTime);
+		// randomize question rock timing again
+		questionRockX = irandom_range(minQuestionRockX, maxQuestionRockX);
+		// randomize next question rock x-value location again
+	}
 
 	//
 	// spawn saws!

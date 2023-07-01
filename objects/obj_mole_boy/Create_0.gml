@@ -48,6 +48,7 @@ func_drilling_state = function(_step) {
 		if (drillCnt < endDrill) {
 			y += drillY; // Mole Boy's drilling downwards
 			drillCnt++;
+			func_left_and_right_movement();
 		} else {
 			state = func_stalling_state;
 			state(_step);
@@ -70,6 +71,8 @@ func_stalling_state = function(_step) {
 			state = func_returning_state;
 			state(_step);
 			exit;
+		} else {
+			func_left_and_right_movement();
 		}
 		drillStallCnt++;
 	}

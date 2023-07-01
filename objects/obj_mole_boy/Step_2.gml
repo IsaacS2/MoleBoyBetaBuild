@@ -37,6 +37,13 @@ if (place_meeting(x, y, obj_rock_sturdy_obstacle) && !global.debug) {
 }
 
 //
+// question rock collision
+//
+if (place_meeting(x, y, obj_rock_question)) {
+	instance_destroy(instance_nearest(x, y, obj_rock_question));
+}
+
+//
 // rock collision
 //
 if ( (global.rockSlowDown & outsideRockSpeed) && 
