@@ -4,9 +4,13 @@ if (global.gamePaused) {
 }
 
 //func_static_obstacle_movement(floor(global.layerSpeed / global.rockSlowDown));
-x = obj_question_enemy.x;
-y = obj_question_enemy.y;
-
+if (instance_exists(obj_question_enemy)) {	
+	x = obj_question_enemy.x;
+	y = obj_question_enemy.y;
+} 
+else {
+	instance_destroy();
+}
 if (y < yDelete) {
 	instance_destroy();
 }

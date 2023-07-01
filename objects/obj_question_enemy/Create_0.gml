@@ -1,6 +1,6 @@
 /// @description Question Rock Enemy stats!
 yDelete = -128;
-xDelete = 128;
+xDelete = 200;
 right = true;
 currRight = 1;
 

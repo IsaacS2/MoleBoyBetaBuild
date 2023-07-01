@@ -23,7 +23,7 @@ if (!global.gamePaused) {
 
 	// sturdy rock will be spawned down now
 	if (sturdyRockCnt >= sturdyRockSpawnTime) {
-		instance_create_depth(sturdyRockX, room_height + 48, 1, obj_rock_sturdy_obstacle);
+		instance_create_depth(sturdyRockX, room_height + 56, 1, obj_rock_sturdy_obstacle);
 		sturdyRockCnt = 0;
 		sturdyRockSpawnTime = irandom_range(minSturdyRockSpawnTime, maxSturdyRockSpawnTime);
 		// randomize sturdy rock timing again
@@ -35,8 +35,7 @@ if (!global.gamePaused) {
 
 	// question rock will be spawned down now
 	if (questionRockCnt >= questionRockSpawnTime) {
-		instance_create_depth(questionRockX, room_height + 48, 1, obj_question_enemy);
-		newQuestionRock = instance_create_depth(sawX, room_height + 48, 0, obj_saw_obstacle);
+		newQuestionRock = instance_create_depth(questionRockX, room_height + 128, 1, obj_question_enemy);
 		if (questionRockX < (room_width / 2) ) {
 			newQuestionRock.currRight = 1;
 			newQuestionRock.right = true;
