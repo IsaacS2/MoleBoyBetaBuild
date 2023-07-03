@@ -24,4 +24,10 @@ with (obj_mole_boy) {
 	}
 }
 
+if debug_mode
+{
+    draw_text((room_width / 2) + 256, 32, "FPS = " + string(fps_real) + " Speed = " + string(game_get_speed(gamespeed_fps)));
+    draw_text((room_width / 2) + 256, room_height - 64, "FPS = " + string(fps_real) + " Speed = " + string(game_get_speed(gamespeed_fps)));
+}
+
 	

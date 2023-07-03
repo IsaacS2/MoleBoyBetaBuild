@@ -52,8 +52,8 @@ sturdyRockIncVal = 1 * global.currentExcavationSpeed;
 //
 // values for spawning questions rocks
 //
-minQuestionRockSpawnTime = 1250;
-maxQuestionRockSpawnTime = 1500;
+minQuestionRockSpawnTime = 700;
+maxQuestionRockSpawnTime = 900;
 questionRockSpawnTime = irandom_range(minQuestionRockSpawnTime, maxQuestionRockSpawnTime);
 questionRockWidth = 128;  // technically half width
 minQuestionRockX = questionRockWidth;

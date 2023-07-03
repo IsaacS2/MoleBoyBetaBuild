@@ -59,6 +59,12 @@ function func_destroy_rocks() {
 		instance_destroy(instance_nearest(x, y, obj_rock_question));
 		powerUp1 = 1;
 	}
+	if (place_meeting(x, y, obj_question_enemy)) {
+		//var questionRock = instance_nearest(x, y, obj_rock_question);
+		//instance_create_depth(questionRock.x, questionRock.y, 0, obj_rock_question_broken);  // new broken rock that plays animation
+		instance_destroy(instance_nearest(x, y, obj_question_enemy));
+		powerUp1 = 1;
+	}
 }
 
 

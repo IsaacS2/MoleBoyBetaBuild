@@ -39,9 +39,13 @@ if (!global.gamePaused) {
 		if (questionRockX < (room_width / 2) ) {
 			newQuestionRock.currRight = 1;
 			newQuestionRock.right = true;
+			newQuestionRock.sprite_index = spr_question_enemy_right;
+			newQuestionRock.mask_index = spr_question_enemy_right;
 		} else {
 			newQuestionRock.currRight = -1;
 			newQuestionRock.right = false;
+			newQuestionRock.sprite_index = spr_question_enemy_left;
+			newQuestionRock.mask_index = spr_question_enemy_left;
 		}
 		questionRockCnt = 0;
 		questionRockSpawnTime = irandom_range(minQuestionRockSpawnTime, maxQuestionRockSpawnTime);
