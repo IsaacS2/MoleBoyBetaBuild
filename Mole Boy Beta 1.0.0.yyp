@@ -33,12 +33,13 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"worm","folderPath":"folders/Sprites/worm.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"enemies","folderPath":"folders/Sprites/enemies.yy",},
   ],
   "IncludedFiles": [],
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.4.0.84",
+    "IDEVersion": "2023.6.0.89",
   },
   "resources": [
     {"id":{"name":"spr_default_background","path":"sprites/spr_default_background/spr_default_background.yy",},},
@@ -88,6 +89,7 @@
     {"id":{"name":"spr_mole_boy_leftovers","path":"sprites/spr_mole_boy_leftovers/spr_mole_boy_leftovers.yy",},},
     {"id":{"name":"obj_rock_question_broken","path":"objects/obj_rock_question_broken/obj_rock_question_broken.yy",},},
     {"id":{"name":"spr_question_enemy_original","path":"sprites/spr_question_enemy_original/spr_question_enemy_original.yy",},},
+    {"id":{"name":"spr_question_enemy_no_limbs","path":"sprites/spr_question_enemy_no_limbs/spr_question_enemy_no_limbs.yy",},},
     {"id":{"name":"spr_worm_icon","path":"sprites/spr_worm_icon/spr_worm_icon.yy",},},
     {"id":{"name":"spr_mole_boy_base","path":"sprites/spr_mole_boy_base/spr_mole_boy_base.yy",},},
     {"id":{"name":"obj_worm","path":"objects/obj_worm/obj_worm.yy",},},
