@@ -38,8 +38,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "enemies",
-    "path": "folders/Sprites/enemies.yy",
+    "name": "question_rock_enemy",
+    "path": "folders/Sprites/enemies/question_rock_enemy.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

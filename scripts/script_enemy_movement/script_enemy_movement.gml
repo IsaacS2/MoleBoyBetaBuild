@@ -6,5 +6,5 @@ function func_question_enemy_movement(_xMovement, _minYMovement, _maxYMovement){
 	x += _xMovement;
 	y -= randomYBoost;
 	
-	//image_angle = (randomYBoost * yMultiple) - (yMultiple * 2);
+	//imageAngle = (randomYBoost * yMultiple) - (yMultiple * 2);
 }

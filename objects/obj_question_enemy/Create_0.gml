@@ -3,6 +3,7 @@ yDelete = -128;
 xDelete = 200;
 right = true;
 currRight = 1;
+imageAngle = 0;
 
 baseMinYSpeed = 0;
 baseMaxYSpeed = 4;
