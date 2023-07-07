@@ -10,5 +10,6 @@
 //yStart = room_height + 66;
 yDelete = -80;
 depth = -2;
+right = true;
 
 //y = yStart;

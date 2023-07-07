@@ -1,2 +1,2 @@
 /// @description Draw enemy and dirt patches!
-draw_self();
+func_question_enemy_sprite();

@@ -56,6 +56,9 @@ function func_destroy_rocks() {
 	if (place_meeting(x, y, obj_rock_question)) {
 		var questionRock = instance_nearest(x, y, obj_rock_question);
 		instance_create_depth(questionRock.x, questionRock.y, 0, obj_rock_question_broken);  // new broken rock that plays animation
+		if (!(questionRock.right)) {
+			obj_rock_question_broken.xscale = -1;
+		}
 		instance_destroy(instance_nearest(x, y, obj_rock_question));
 		powerUp1 = 1;
 	}

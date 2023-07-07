@@ -1,11 +1,11 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_question_enemy_right",
-  "bbox_bottom": 187,
-  "bbox_left": 58,
-  "bbox_right": 144,
-  "bbox_top": 71,
+  "name": "spr_question_enemy_original_old",
+  "bbox_bottom": 215,
+  "bbox_left": 37,
+  "bbox_right": 146,
+  "bbox_top": 55,
   "bboxMode": 2,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -13,7 +13,7 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f18d1e10-485c-48e6-b93e-18ab89afac6a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"924851a2-6226-444c-9ebd-74a394935a20",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -32,7 +32,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_question_enemy_right",
+    "name": "spr_question_enemy_original_old",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f18d1e10-485c-48e6-b93e-18ab89afac6a","path":"sprites/spr_question_enemy_right/spr_question_enemy_right.yy",},},},"Disabled":false,"id":"2098bdaf-9824-4f26-8ef5-98d6806c7bb3","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"924851a2-6226-444c-9ebd-74a394935a20","path":"sprites/spr_question_enemy_original_old/spr_question_enemy_original_old.yy",},},},"Disabled":false,"id":"98f522e3-7b85-462c-9ba2-ce72ec7fbe09","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

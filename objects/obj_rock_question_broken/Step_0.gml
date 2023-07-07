@@ -5,6 +5,6 @@ if (global.gamePaused) {
 
 func_static_obstacle_movement(floor(global.layerSpeed / global.rockSlowDown));
 
-if (y < yDelete || image_index >= 17) {
+if (y < yDelete || image_index >= 35) {
 	instance_destroy();
 }
