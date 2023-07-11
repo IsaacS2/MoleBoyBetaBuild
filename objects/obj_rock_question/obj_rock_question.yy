@@ -32,6 +32,9 @@
     "name": "spr_power_up_rock",
     "path": "sprites/spr_power_up_rock/spr_power_up_rock.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_power_up_rock",
+    "path": "sprites/spr_power_up_rock/spr_power_up_rock.yy",
+  },
   "visible": true,
 }

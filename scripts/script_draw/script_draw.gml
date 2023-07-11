@@ -10,8 +10,8 @@ function func_mole_boy_sprite() {
 }
 
 function func_question_enemy_sprite() {
-	draw_sprite_ext(currentSprite, -1, x, y, 1, 1, image_angle, c_white, 1);
-	draw_sprite_ext(earSprite, -1, x - 40, y - 50, currRight, 1, 0, c_white, 1);
-	draw_sprite_ext(armSprite, -1, x + 10, y + 40, currRight, 1, 0, c_white, 1);
-	draw_sprite_ext(footSprite, -1, x - 10, y + 45, currRight, 1, 0, c_white, 1);
+	draw_sprite_ext(currentSprite, -1, x, y, currRight, 1, image_angle, c_white, 1);
+	draw_sprite_ext(currentEarSprite, -1, x + earXDiff, y + earYDiff, currRight, 1, 0, c_white, 1);
+	draw_sprite_ext(currentArmSprite, -1, x + armXDiff, y + armYDiff, currRight, 1, 0, c_white, 1);
+	draw_sprite_ext(currentFootSprite, -1, x + footXDiff, y + footYDiff, currRight, 1, 0, c_white, 1);
 }

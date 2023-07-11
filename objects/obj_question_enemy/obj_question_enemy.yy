@@ -30,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_question_enemy_right_old",
-    "path": "sprites/spr_question_enemy_right_old/spr_question_enemy_right_old.yy",
+    "name": "spr_question_enemy_right",
+    "path": "sprites/spr_question_enemy_right/spr_question_enemy_right.yy",
   },
   "spriteMaskId": {
     "name": "spr_question_enemy_right_old",

@@ -35,20 +35,17 @@ if (!global.gamePaused) {
 
 	// question rock enemy will be spawned down now
 	if (questionRockCnt >= questionRockSpawnTime) {
-		newQuestionRock = instance_create_depth(questionRockX, room_height + 128, 1, obj_question_enemy);
+		newQuestionEnemy = instance_create_depth(questionRockX, room_height + 128, 1, obj_question_enemy);
 		if (questionRockX < (room_width / 2) ) {
-			newQuestionRock.currRight = 1;
-			newQuestionRock.right = true;
-			//newQuestionRock.sprite_index = spr_question_enemy_right_old;
-			newQuestionRock.mask_index = newQuestionRock.rightSprite;
+			newQuestionEnemy.currRight = 1;
+			newQuestionEnemy.right = true;
+			newQuestionEnemy.mask_index = newQuestionEnemy.rightSprite;
 		} else {
-			newQuestionRock.currRight = -1;
-			newQuestionRock.right = false;
-			//newQuestionRock.sprite_index = spr_question_enemy_left_old;
-			newQuestionRock.mask_index = newQuestionRock.leftSprite;
-			newQuestionRock.currentSprite = newQuestionRock.leftSprite;
+			newQuestionEnemy.currRight = -1;
+			newQuestionEnemy.right = false;
+			newQuestionEnemy.mask_index = newQuestionEnemy.leftSprite;
 		}
-		
+		instance_create_layer(x, y, "Instances", obj_rock_question);
 		questionRockCnt = 0;
 		questionRockSpawnTime = irandom_range(minQuestionRockSpawnTime, maxQuestionRockSpawnTime);
 		// randomize question rock timing again

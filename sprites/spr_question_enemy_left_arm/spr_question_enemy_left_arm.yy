@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_question_enemy_right_arm",
+  "name": "spr_question_enemy_left_arm",
   "bbox_bottom": 194,
   "bbox_left": 74,
   "bbox_right": 143,
@@ -32,7 +32,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_question_enemy_right_arm",
+    "name": "spr_question_enemy_left_arm",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,12 +54,12 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f18d1e10-485c-48e6-b93e-18ab89afac6a","path":"sprites/spr_question_enemy_right_arm/spr_question_enemy_right_arm.yy",},},},"Disabled":false,"id":"6ee915d3-64c7-47ee-a0da-69519dd77383","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f18d1e10-485c-48e6-b93e-18ab89afac6a","path":"sprites/spr_question_enemy_left_arm/spr_question_enemy_left_arm.yy",},},},"Disabled":false,"id":"ce7ecb09-75b1-4064-8d4e-ce903f137c26","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 94,
+    "xorigin": 162,
     "yorigin": 178,
   },
   "swatchColours": null,

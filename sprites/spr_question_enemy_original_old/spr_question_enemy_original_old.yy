@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "question_rock_enemy",
-    "path": "folders/Sprites/enemies/question_rock_enemy.yy",
+    "name": "unused",
+    "path": "folders/Sprites/enemies/question_rock_enemy/unused.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
