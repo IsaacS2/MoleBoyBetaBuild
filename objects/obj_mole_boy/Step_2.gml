@@ -59,6 +59,16 @@ else if ( (global.rockSlowDown & insideRockSpeed) && !place_meeting(x, y, obj_ro
 }
 
 
+//
+// enemy collision
+//
+if (place_meeting(x, y, obj_question_enemy)) {
+	var questionEnemy = instance_nearest(x, y, obj_question_enemy);
+	if (!questionEnemy.escaping) {
+		questionEnemy.func_reset_spin();
+		questionEnemy.escaping = true;
+	}
+}
 
 //
 // Time to add to depth

@@ -38,19 +38,20 @@ if (!global.gamePaused) {
 		newQuestionEnemy = instance_create_depth(questionRockX, room_height + 128, 1, obj_question_enemy);
 		if (questionRockX < (room_width / 2) ) {
 			newQuestionEnemy.currRight = 1;
+			newQuestionEnemy.spinEndAngle = newQuestionEnemy.spinStartAngle - newQuestionEnemy.spinEndAngleDiff;
+			newQuestionEnemy.spinAngleIncVal *= -1;
 			newQuestionEnemy.right = true;
 			newQuestionEnemy.mask_index = newQuestionEnemy.rightSprite;
 		} else {
 			newQuestionEnemy.currRight = -1;
+			newQuestionEnemy.spinEndAngle = newQuestionEnemy.spinStartAngle + newQuestionEnemy.spinEndAngleDiff;
+			newQuestionEnemy.escapeDistance *= -1;
 			newQuestionEnemy.right = false;
 			newQuestionEnemy.mask_index = newQuestionEnemy.leftSprite;
 		}
-		instance_create_layer(x, y, "Instances", obj_rock_question);
 		questionRockCnt = 0;
 		questionRockSpawnTime = irandom_range(minQuestionRockSpawnTime, maxQuestionRockSpawnTime);
-		// randomize question rock timing again
 		questionRockX = irandom_range(minQuestionRockX, maxQuestionRockX);
-		// randomize next question rock x-value location again
 	}
 
 	//

@@ -1,10 +1,19 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function func_question_enemy_movement(_xMovement, _minYMovement, _maxYMovement){
-	var randomYBoost = irandom_range(_minYMovement, _maxYMovement);
-	var yMultiple = 3;
+function func_question_enemy_movement(_xMovement, _yMovement) {
 	x += _xMovement;
-	y -= randomYBoost;
+	y -= _yMovement;
 	
 	//imageAngle = (randomYBoost * yMultiple) - (yMultiple * 2);
+}
+
+function func_question_enemy_turn() {
+	spinAngle += ceil(spinAngleIncVal * global.currentExcavationSpeed);
+	if ((spinAngle >= spinEndAngle && !right) || (spinAngle <= spinEndAngle && right)) {
+		func_reset_spin();
+	}
+	else {
+		x = round(lengthdir_x(spinDistance, spinAngle)) + spinXPoint;
+		y = floor(lengthdir_y(spinDistance, spinAngle)) + spinYPoint;
+	}
 }
