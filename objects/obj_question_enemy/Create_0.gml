@@ -37,6 +37,8 @@ escaping = false;
 
 rightSprite = spr_question_enemy_right;
 leftSprite = spr_question_enemy_left;
+deathSprite = spr_question_enemy_left_dead;
+deathSpinningSprite = spr_question_enemy_left_dead_spinning;
 /*
 rightArmSprite = spr_question_enemy_right_arm;
 rightEarSprite = spr_question_enemy_right_ear;
@@ -51,6 +53,7 @@ currentEarSprite = rightEarSprite;
 currentFootSprite = rightFootSprite;
 */
 currentSprite = rightSprite;
+
 
 armXDiff = 10;
 armYDiff = 40;

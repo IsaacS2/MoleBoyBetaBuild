@@ -62,6 +62,7 @@ function func_destroy_rocks() {
 			}
 			instance_destroy(instance_nearest(x, y, obj_question_enemy));
 			powerUp1 = 1;
+			instance_create_layer(x, y, "Instances", obj_question_enemy_dead);
 		}
 	}
 }
