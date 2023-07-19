@@ -17,3 +17,12 @@ function func_question_enemy_turn() {
 		y = floor(lengthdir_y(spinDistance, spinAngle)) + spinYPoint;
 	}
 }
+
+function func_move_dead_enemy() {
+	x += xMovement;
+	y += vspd;
+	if (vspd < maxGravityPull) {
+		vspd = min(maxGravityPull, vspd + normalGravityAcceleration);
+	}
+	image_angle += turnSpeed;
+}

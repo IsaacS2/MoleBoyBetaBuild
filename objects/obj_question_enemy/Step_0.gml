@@ -24,6 +24,6 @@ else {
 	func_question_enemy_movement(currRight, ySpeed * global.currentExcavationSpeed);
 }
 
-if (y < yDelete || x < -xDelete || x > room_width + xDelete) {
+if ((y < yDelete || x < -xDelete || x > room_width + xDelete) && !escaping) {
 	instance_destroy();
 }
