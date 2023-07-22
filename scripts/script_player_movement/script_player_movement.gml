@@ -175,3 +175,8 @@ function func_switchFrom_inRock() {
 	global.rockSlowDown = outsideRockSpeed;
 	layer_vspeed(obj_control.lay_id, -floor(global.layerSpeed / global.rockSlowDown));
 }
+
+function func_switchTo_dead() {
+	image_speed = 1;
+	currentSprite = deadSprite;
+}

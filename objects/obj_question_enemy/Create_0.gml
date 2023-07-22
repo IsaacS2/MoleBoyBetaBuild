@@ -33,10 +33,18 @@ escapeWarpTimeCnt = 0;
 escapeEndTimeCnt = 0;
 escapeIncVal = 1;
 escapeDistance = 160;
+escapeDigImageIndex = 16;  // sprite image index where enemy digs towards background
 escaping = false;
+escapeAlpha = 1;
+escapeAlphaDecrementor = 0.04;
+escapeAlphaIncrementor = 0.04;
 
 rightSprite = spr_question_enemy_right;
 leftSprite = spr_question_enemy_left;
+escapingSprite = spr_question_enemy_escaping;
+armEscapingSprite = spr_question_enemy_escaping_arms;
+earEscapingSprite = spr_question_enemy_escaping_ears;
+legEscapingSprite = spr_question_enemy_escaping_legs;
 deathSprite = spr_question_enemy_left_dead;
 deathSpinningSprite = spr_question_enemy_left_dead_spinning;
 /*

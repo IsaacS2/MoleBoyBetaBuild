@@ -14,6 +14,7 @@
 // Global variable pause mechanic from https://www.youtube.com/watch?v=JwWuZXyTzN0&t=1426s
 //
 global.gamePaused = false;
+global.dead = false;
 global.speedChange = false;
 global.moleBoySpeedChange = false;
 global.rockSlowDown = outsideRockSpeed;
@@ -30,6 +31,7 @@ global.debug = false;
 
 function func_initialize_globals() {
 	global.gamePaused = false;
+	global.dead = false;
 	global.speedChange = false;
 	global.moleBoySpeedChange = false;
 	global.rockSlowDown = outsideRockSpeed;
@@ -88,4 +90,22 @@ function func_delete_score() {
 	global.newWinnings = 0;
 	global.bestDepth = 0;
 	global.totalWinnings = 0;
+}
+
+function func_freeze_screen() {
+	with (all) {
+		gamePausedImageSpeed = image_speed;
+		image_speed = 0;
+		layer_vspeed(obj_control.lay_id, 0);
+	}
+}
+
+function func_initialize_death_screen() {
+	func_freeze_screen();
+	global.dead = true;
+	global.gamePaused = true;
+	/*
+	func_save_game();
+	func_reset_excavation();  // DEATH
+	*/
 }

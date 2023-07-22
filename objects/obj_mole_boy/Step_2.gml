@@ -19,8 +19,7 @@ if (place_meeting(x, y, obj_worm)) {
 // saw collision
 //
 if (place_meeting(x, y, obj_saw_obstacle) && !global.debug) {
-	func_save_game();
-	func_reset_excavation();  // DEATH
+	func_initialize_death_screen();
 	exit;
 }
 
@@ -31,8 +30,7 @@ state(currStep);
 // sturdy rock collision
 //
 if (place_meeting(x, y, obj_rock_sturdy_obstacle) && !global.debug) {
-	func_save_game();
-	func_reset_excavation();  // DEATH
+	func_initialize_death_screen();
 	exit;
 }
 
@@ -67,6 +65,7 @@ if (place_meeting(x, y, obj_question_enemy)) {
 	if (!questionEnemy.escaping) {
 		questionEnemy.func_reset_spin();
 		questionEnemy.escaping = true;
+		questionEnemy.currentSprite = questionEnemy.escapingSprite;
 	}
 }
 
@@ -84,8 +83,7 @@ if (wormDecreaseCnt >= wormDecrementTime) {
 	wormDecreaseCnt = 0;
 	wormMeterVal -= wormDecrementVal;
 	if (wormMeterVal <= 0 && !global.debug) {
-		func_save_game();
-		func_reset_excavation();  // HUNGRY
+		func_initialize_death_screen();
 		exit;
 	} 
 	else if (global.debug) {

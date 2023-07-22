@@ -96,6 +96,16 @@ func_returning_state = function(_step) {
 }
 
 
+//
+// func_death_state
+//
+// This method plays animation for when Mole Boy dies.
+//
+func_death_state = function(_step) {
+	
+}
+
+
 slip = 1;  // for diiferent environment changes
 movement = baseMovement;
 normalMovement = movement;  // unchanged variable that is used to return movement to original value
@@ -143,6 +153,7 @@ wormBoost = round(wormMeterMax / 2);
 currStep = beginStepVal;  // for checking the current step of Mole Boy
 state = func_neutral_state;
 normalSprite = spr_mole_boy_no_effects;
+deadSprite = 1;
 attackingSprite = spr_mole_boy_drilling_red;
 topDrillSprite = spr_mole_boy_front_drill_residue;
 bottomDrillSprite = spr_mole_boy_back_drill_residue;
