@@ -28,6 +28,7 @@
   ],
   "ResourceOrderSettings": [
     {"name":"obj_rock_sturdy_obstacle","order":4,"path":"objects/obj_rock_sturdy_obstacle/obj_rock_sturdy_obstacle.yy",},
+    {"name":"spr_mole_boy_stun","order":11,"path":"sprites/spr_mole_boy_stun/spr_mole_boy_stun.yy",},
     {"name":"script_obstacle_movement","order":1,"path":"scripts/script_obstacle_movement/script_obstacle_movement.yy",},
     {"name":"spr_question_enemy_escaping_arms","order":17,"path":"sprites/spr_question_enemy_escaping_arms/spr_question_enemy_escaping_arms.yy",},
     {"name":"spr_question_enemy_right_ear","order":10,"path":"sprites/spr_question_enemy_right_ear/spr_question_enemy_right_ear.yy",},
@@ -70,6 +71,7 @@
     {"name":"spr_worm_meter_bg","order":2,"path":"sprites/spr_worm_meter_bg/spr_worm_meter_bg.yy",},
     {"name":"obj_control","order":2,"path":"objects/obj_control/obj_control.yy",},
     {"name":"spr_dirt_worm","order":4,"path":"sprites/spr_dirt_worm/spr_dirt_worm.yy",},
+    {"name":"spr_mole_boy_stun_old","order":12,"path":"sprites/spr_mole_boy_stun_old/spr_mole_boy_stun_old.yy",},
     {"name":"spr_worm","order":4,"path":"sprites/spr_worm/spr_worm.yy",},
     {"name":"spr_mole_boy_no_effects","order":6,"path":"sprites/spr_mole_boy_no_effects/spr_mole_boy_no_effects.yy",},
     {"name":"obj_rock_broken","order":2,"path":"objects/obj_rock_broken/obj_rock_broken.yy",},
@@ -96,5 +98,6 @@
     {"name":"spr_question_enemy_left_foot","order":8,"path":"sprites/spr_question_enemy_left_foot/spr_question_enemy_left_foot.yy",},
     {"name":"spr_money_count","order":13,"path":"sprites/spr_money_count/spr_money_count.yy",},
     {"name":"spr_question_enemy_left_old2","order":5,"path":"sprites/spr_question_enemy_left_old2/spr_question_enemy_left_old2.yy",},
+    {"name":"spr_mole_boy_death","order":10,"path":"sprites/spr_mole_boy_death/spr_mole_boy_death.yy",},
   ],
 }

@@ -38,6 +38,7 @@ escaping = false;
 escapeAlpha = 1;
 escapeAlphaDecrementor = 0.04;
 escapeAlphaIncrementor = 0.04;
+escapeSpriteStage = 0;
 
 rightSprite = spr_question_enemy_right;
 leftSprite = spr_question_enemy_left;

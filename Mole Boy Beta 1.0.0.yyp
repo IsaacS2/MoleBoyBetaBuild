@@ -48,6 +48,7 @@
     {"id":{"name":"spr_default_background","path":"sprites/spr_default_background/spr_default_background.yy",},},
     {"id":{"name":"obj_rock_sturdy_obstacle","path":"objects/obj_rock_sturdy_obstacle/obj_rock_sturdy_obstacle.yy",},},
     {"id":{"name":"spr_worm_meter","path":"sprites/spr_worm_meter/spr_worm_meter.yy",},},
+    {"id":{"name":"spr_mole_boy_stun","path":"sprites/spr_mole_boy_stun/spr_mole_boy_stun.yy",},},
     {"id":{"name":"script_obstacle_movement","path":"scripts/script_obstacle_movement/script_obstacle_movement.yy",},},
     {"id":{"name":"spr_question_enemy_escaping_arms","path":"sprites/spr_question_enemy_escaping_arms/spr_question_enemy_escaping_arms.yy",},},
     {"id":{"name":"spr_question_enemy_right_ear","path":"sprites/spr_question_enemy_right_ear/spr_question_enemy_right_ear.yy",},},
@@ -97,6 +98,7 @@
     {"id":{"name":"spr_worm_meter_bg","path":"sprites/spr_worm_meter_bg/spr_worm_meter_bg.yy",},},
     {"id":{"name":"obj_control","path":"objects/obj_control/obj_control.yy",},},
     {"id":{"name":"spr_dirt_worm","path":"sprites/spr_dirt_worm/spr_dirt_worm.yy",},},
+    {"id":{"name":"spr_mole_boy_stun_old","path":"sprites/spr_mole_boy_stun_old/spr_mole_boy_stun_old.yy",},},
     {"id":{"name":"spr_worm","path":"sprites/spr_worm/spr_worm.yy",},},
     {"id":{"name":"spr_mole_boy_no_effects","path":"sprites/spr_mole_boy_no_effects/spr_mole_boy_no_effects.yy",},},
     {"id":{"name":"obj_rock_broken","path":"objects/obj_rock_broken/obj_rock_broken.yy",},},
@@ -125,6 +127,7 @@
     {"id":{"name":"spr_question_enemy_left_foot","path":"sprites/spr_question_enemy_left_foot/spr_question_enemy_left_foot.yy",},},
     {"id":{"name":"spr_money_count","path":"sprites/spr_money_count/spr_money_count.yy",},},
     {"id":{"name":"spr_question_enemy_left_old2","path":"sprites/spr_question_enemy_left_old2/spr_question_enemy_left_old2.yy",},},
+    {"id":{"name":"spr_mole_boy_death","path":"sprites/spr_mole_boy_death/spr_mole_boy_death.yy",},},
     {"id":{"name":"rm_excavation","path":"rooms/rm_excavation/rm_excavation.yy",},},
   ],
   "RoomOrderNodes": [
