@@ -18,6 +18,7 @@ else if (escaping) {
 		escapeWarpTimeCnt = 0;
 		escapeEndTimeCnt = 0;
 		escaping = false;
+		currentSprite = rightSprite;
 	}
 }
 else {

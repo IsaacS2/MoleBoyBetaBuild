@@ -19,7 +19,7 @@ if (place_meeting(x, y, obj_worm)) {
 // saw collision
 //
 if (place_meeting(x, y, obj_saw_obstacle) && !global.debug) {
-	func_initialize_death_screen();
+	func_switchTo_dead();
 	exit;
 }
 
@@ -30,7 +30,7 @@ state(currStep);
 // sturdy rock collision
 //
 if (place_meeting(x, y, obj_rock_sturdy_obstacle) && !global.debug) {
-	func_initialize_death_screen();
+	func_switchTo_dead();
 	exit;
 }
 
@@ -83,7 +83,7 @@ if (wormDecreaseCnt >= wormDecrementTime) {
 	wormDecreaseCnt = 0;
 	wormMeterVal -= wormDecrementVal;
 	if (wormMeterVal <= 0 && !global.debug) {
-		func_initialize_death_screen();
+		func_switchTo_dead();
 		exit;
 	} 
 	else if (global.debug) {

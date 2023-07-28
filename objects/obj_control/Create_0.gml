@@ -96,4 +96,9 @@ currDirtYMultiple = 0;
 dirtSpawnDeterminant = 1;  // if global.rockSlowDown is insideRockSpeed, dirt patches will be spawned every other frames because of this var
 maxDirtYDiff = floor(96 / global.currentExcavationSpeed)
 
+ringY = 76;
+leftRingX = 20;
+rightRingX = 88;
+
+
 depth = -1;

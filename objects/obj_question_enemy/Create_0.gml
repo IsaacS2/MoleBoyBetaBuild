@@ -3,6 +3,7 @@ func_reset_spin = function() {
 	spinning = false;
 	spinAngle = spinStartAngle;
 	spinTimeCnt = 0;
+	currentSprite = rightSprite;
 }
 
 yDelete = -200;

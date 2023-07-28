@@ -102,7 +102,24 @@ func_returning_state = function(_step) {
 // This method plays animation for when Mole Boy dies.
 //
 func_death_state = function(_step) {
-	
+	if (_step == beginStepVal) {
+		if (deathCnt < 1) {
+			stunCnt++;
+			if (stunCnt > endStun) {
+				currentSprite = deadSprite;
+				deathCnt++;
+				sprite_index = spr_mole_boy_death;
+				image_index = 0;
+			}
+		} else {
+			deathCnt++
+			if (deathCnt > endDeath) {
+				func_save_game();
+				func_reset_excavation();
+				exit;
+			}
+		}
+	}
 }
 
 
@@ -121,11 +138,16 @@ maxMomentum = baseMaxMomentum;
 drillY = 67;
 drillCnt = 0;
 drillStallCnt = 0;
+stunCnt = 0;
+deathCnt = 0;
 endDrill = 5;
 endStall = baseEndStall;
+endStun = 45;
+endDeath = 120;
 returnY = room_height / 64;
 rockCash = 50;
 sturdyRockCash = 100;
+deathSpriteSpeed = 12;
 
 //
 // values for creating/changing worm meter
@@ -153,7 +175,8 @@ wormBoost = round(wormMeterMax / 2);
 currStep = beginStepVal;  // for checking the current step of Mole Boy
 state = func_neutral_state;
 normalSprite = spr_mole_boy_no_effects;
-deadSprite = 1;
+stunnedSprite = spr_mole_boy_stun;
+deadSprite = spr_mole_boy_death;
 attackingSprite = spr_mole_boy_drilling_red;
 topDrillSprite = spr_mole_boy_front_drill_residue;
 bottomDrillSprite = spr_mole_boy_back_drill_residue;

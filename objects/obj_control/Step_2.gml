@@ -122,6 +122,7 @@ if (keyboard_check_pressed(vk_escape) && !global.dead) {
 	global.gamePaused = !global.gamePaused;
 	
 	if (global.gamePaused) {
+		instance_create_layer(room_width / 2, room_height / 2, "Instances", obj_button_restart);
 		func_freeze_screen();
 	}
 	else {
@@ -129,7 +130,12 @@ if (keyboard_check_pressed(vk_escape) && !global.dead) {
 			image_speed = gamePausedImageSpeed;
 			layer_vspeed(obj_control.lay_id, -floor(global.layerSpeed / global.rockSlowDown));
 		}
+		instance_destroy(obj_button_restart);
 	}
+}
+
+if (keyboard_check_pressed(vk_enter) && global.gamePaused && !global.dead) {
+	func_reset_excavation();
 }
 
 if (keyboard_check_pressed(ord("R"))) {

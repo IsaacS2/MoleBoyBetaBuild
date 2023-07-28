@@ -15,6 +15,9 @@ keyAttack = keyboard_check(vk_space);
 keyPower = keyboard_check(ord("C"));
 
 if (global.gamePaused) {
+	if (global.dead) {
+		state(beginStepVal);
+	}
 	exit;
 }
 //

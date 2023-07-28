@@ -177,6 +177,10 @@ function func_switchFrom_inRock() {
 }
 
 function func_switchTo_dead() {
+	func_initialize_death_screen();
+	sprite_set_speed(sprite_index, 60, spritespeed_framespersecond);
+	image_angle = 0;
+	state = func_death_state;
+	currentSprite = stunnedSprite;
 	image_speed = 1;
-	currentSprite = deadSprite;
 }
