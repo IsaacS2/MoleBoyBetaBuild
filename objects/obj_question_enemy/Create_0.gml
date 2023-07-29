@@ -49,19 +49,6 @@ earEscapingSprite = spr_question_enemy_escaping_ears;
 legEscapingSprite = spr_question_enemy_escaping_legs;
 deathSprite = spr_question_enemy_left_dead;
 deathSpinningSprite = spr_question_enemy_left_dead_spinning;
-/*
-rightArmSprite = spr_question_enemy_right_arm;
-rightEarSprite = spr_question_enemy_right_ear;
-rightFootSprite = spr_question_enemy_right_foot;
-leftSprite = spr_question_enemy_left;
-leftArmSprite = spr_question_enemy_left_arm;
-leftEarSprite = spr_question_enemy_left_ear;
-leftFootSprite = spr_question_enemy_left_foot;
-
-currentArmSprite = rightArmSprite;
-currentEarSprite = rightEarSprite;
-currentFootSprite = rightFootSprite;
-*/
 currentSprite = rightSprite;
 
 
