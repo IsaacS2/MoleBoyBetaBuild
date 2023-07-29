@@ -15,6 +15,7 @@
 //
 global.gamePaused = false;
 global.dead = false;
+global.powerupActivated = false;
 global.speedChange = false;
 global.moleBoySpeedChange = false;
 global.rockSlowDown = outsideRockSpeed;
@@ -32,6 +33,7 @@ global.debug = false;
 function func_initialize_globals() {
 	global.gamePaused = false;
 	global.dead = false;
+	global.powerupActivated = false;
 	global.speedChange = false;
 	global.moleBoySpeedChange = false;
 	global.rockSlowDown = outsideRockSpeed;
@@ -104,8 +106,4 @@ function func_initialize_death_screen() {
 	func_freeze_screen();
 	global.dead = true;
 	global.gamePaused = true;
-	/*
-	func_save_game();
-	func_reset_excavation();  // DEATH
-	*/
 }

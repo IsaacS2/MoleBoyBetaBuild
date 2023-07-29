@@ -147,6 +147,7 @@ endDeath = 120;
 returnY = room_height / 64;
 rockCash = 50;
 sturdyRockCash = 100;
+questionRockCash = 500;
 deathSpriteSpeed = 12;
 
 //
@@ -166,6 +167,14 @@ wormDecreaseCnt = 0;
 wormDecrementTime = 15;  // Determines the amount of frames until worm meter is updated
 originalWormDecrementTime = wormDecrementTime;
 wormBoost = round(wormMeterMax / 2);
+
+powerupIconY = 92;
+leftPowerupIconX = 26;
+rightPowerupIconX = 105;
+addRightPowerupSprite = false;
+addLeftPowerupSprite = false;
+powerupSawIconAnimationLength = sprite_get_number(spr_icon_powerup_saw);
+currSawIconIndex = 0
 
 //
 // Thanks to Shaun Spalding for state machine explanation from

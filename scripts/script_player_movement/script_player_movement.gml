@@ -61,7 +61,13 @@ function func_destroy_rocks() {
 				obj_rock_question_broken.xscale = -1;
 			}
 			instance_destroy(instance_nearest(x, y, obj_question_enemy));
-			powerUp1 = 1;
+			if (powerUp2 == 0) {
+				powerUp2 = 1;
+				addRightPowerupSprite = true;
+			}
+			else {
+				global.newWinnings += questionRockCash;
+			}
 			instance_create_layer(x, y, "Instances", obj_question_enemy_dead);
 		}
 	}

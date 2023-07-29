@@ -118,7 +118,7 @@ if (!global.gamePaused) {
 // Thanks to Shaun Spalding for game pausing explanation from
 // "GameMaker Studio 2: Action RPG Tutorial (Part 5: Initialisation/Pausing)"
 // Youtube video: https://www.youtube.com/watch?v=JwWuZXyTzN0&t=1s
-if (keyboard_check_pressed(vk_escape) && !global.dead) {
+if (keyboard_check_pressed(vk_escape) && !global.dead && !global.powerupActivated) {
 	global.gamePaused = !global.gamePaused;
 	
 	if (global.gamePaused) {
@@ -134,7 +134,7 @@ if (keyboard_check_pressed(vk_escape) && !global.dead) {
 	}
 }
 
-if (keyboard_check_pressed(vk_enter) && global.gamePaused && !global.dead) {
+if (keyboard_check_pressed(vk_enter) && global.gamePaused && !global.dead && !global.powerupActivated) {
 	func_reset_excavation();
 }
 

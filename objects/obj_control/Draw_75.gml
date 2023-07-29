@@ -7,4 +7,4 @@ draw_sprite(spr_item_holder_right, 0, rightRingX, ringY);
 draw_text(display_get_gui_width() - 32, 48, ( "$ " + string( ceil( global.currentExcavationWinnings ) ) ) );
 draw_text(48, display_get_gui_height() - 24, string( ceil(global.bestDepth)));
 draw_text(display_get_gui_width() - 32, display_get_gui_height() - 24, ( "$ " + string( global.totalWinnings ) ) );
-draw_text(display_get_gui_width() - 32, 96, ( "power slot 1: " + string(obj_mole_boy.powerUp1) ) );
+draw_text(display_get_gui_width() - 32, 96, ( "power slot 2: " + string(obj_mole_boy.powerUp2) ) );

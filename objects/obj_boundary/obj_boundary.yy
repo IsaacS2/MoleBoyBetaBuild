@@ -32,5 +32,5 @@
     "path": "sprites/spr_boundary/spr_boundary.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

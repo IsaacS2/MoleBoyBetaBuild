@@ -14,12 +14,12 @@ func_falling_state = function() {
 dir = 1;
 stopY = round(room_height / 10);
 spawnX = room_width / 4;
-spawnY = -64;
+spawnY = -48;
 
 hitGround = false;
-hitBounce = -6;
+hitBounce = -7;
 vspd = 0;
-normalGravityAcceleration = .4;
+normalGravityAcceleration = .7;
 maxGravityPull = 30;
 state = func_starting_state;
 
