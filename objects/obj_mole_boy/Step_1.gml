@@ -12,10 +12,10 @@ keyLeft = keyboard_check(vk_left);
 keyUp = keyboard_check(vk_up);
 keyDown = keyboard_check(vk_down);
 keyAttack = keyboard_check(vk_space);
-keyPower = keyboard_check(ord("C"));
+keyPower = keyboard_check_pressed(ord("C")) || keyboard_check_pressed(ord("P"));
 
 if (global.gamePaused) {
-	if (global.dead) {
+	if (global.dead || global.powerupActivated) {
 		state(beginStepVal);
 	}
 	exit;

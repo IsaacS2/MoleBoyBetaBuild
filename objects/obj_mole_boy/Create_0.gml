@@ -21,6 +21,16 @@
 //
 func_neutral_state = function(_step) {
 	if (_step == beginStepVal) {
+		if (keyPower && (powerUp1 != 0 || powerUp2 != 0) && (global.rockSlowDown & outsideRockSpeed)) {
+			if (powerUp1 != 0) {
+				powerUp1 = 0;
+			}
+			else {
+				powerUp2 = 0;
+			}
+			func_switchTo_powerup_activate();
+			exit;
+		}
 		if (keyAttack) { // Drilling time!
 			func_switchTo_drilling();
 			state = func_drilling_state;
@@ -102,23 +112,31 @@ func_returning_state = function(_step) {
 // This method plays animation for when Mole Boy dies.
 //
 func_death_state = function(_step) {
-	if (_step == beginStepVal) {
-		if (deathCnt < 1) {
-			stunCnt++;
-			if (stunCnt > endStun) {
-				currentSprite = deadSprite;
-				deathCnt++;
-				sprite_index = spr_mole_boy_death;
-				image_index = 0;
-			}
-		} else {
-			deathCnt++
-			if (deathCnt > endDeath) {
-				func_save_game();
-				func_reset_excavation();
-				exit;
-			}
+	if (deathCnt < 1) {
+		stunCnt++;
+		if (stunCnt > endStun) {
+			currentSprite = deadSprite;
+			deathCnt++;
+			sprite_index = spr_mole_boy_death;
+			image_index = 0;
 		}
+	} else {
+		deathCnt++
+		if (deathCnt > endDeath) {
+			func_save_game();
+			func_reset_excavation();
+			exit;
+		}
+	}
+}
+
+func_powerup_state = function(_step) {
+	if (stunCnt >= endStunSawPowerup) {
+		stunCnt = 0;
+		func_switchFrom_powerup_activate();
+	}
+	else {
+		stunCnt++;
 	}
 }
 
@@ -143,6 +161,7 @@ deathCnt = 0;
 endDrill = 5;
 endStall = baseEndStall;
 endStun = 45;
+endStunSawPowerup = 30;
 endDeath = 120;
 returnY = room_height / 64;
 rockCash = 50;
@@ -174,7 +193,7 @@ rightPowerupIconX = 105;
 addRightPowerupSprite = false;
 addLeftPowerupSprite = false;
 powerupSawIconAnimationLength = sprite_get_number(spr_icon_powerup_saw);
-currSawIconIndex = 0
+currSawIconIndex = 0;
 
 //
 // Thanks to Shaun Spalding for state machine explanation from

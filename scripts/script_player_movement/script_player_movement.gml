@@ -190,3 +190,22 @@ function func_switchTo_dead() {
 	currentSprite = stunnedSprite;
 	image_speed = 1;
 }
+
+function func_switchTo_powerup_activate() {
+	func_initialize_powerup_screen();
+	state = func_powerup_state;
+	//currentSprite = stunnedSprite;
+	//playerSpriteSpeed = sprite_get_speed(sprite_index);
+	momentum = 0;
+	image_angle = 0;
+	image_speed = 1;
+}
+
+function func_switchFrom_powerup_activate() {
+	//sprite_set_sprite(sprite_index, playerSpriteSpeed, spritespeed_framespersecond);
+	//currentSprite = normalSprite;
+	state = func_neutral_state;
+	func_unfreeze_screen();
+	global.powerupActivated = false;
+	global.gamePaused = false;
+}

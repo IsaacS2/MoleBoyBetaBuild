@@ -102,8 +102,21 @@ function func_freeze_screen() {
 	}
 }
 
+function func_unfreeze_screen() {
+	with (all) {
+		image_speed = gamePausedImageSpeed;
+		layer_vspeed(obj_control.lay_id, -floor(global.layerSpeed / global.rockSlowDown));
+	}
+}
+
 function func_initialize_death_screen() {
 	func_freeze_screen();
 	global.dead = true;
+	global.gamePaused = true;
+}
+
+function func_initialize_powerup_screen() {
+	func_freeze_screen();
+	global.powerupActivated = true;
 	global.gamePaused = true;
 }

@@ -53,8 +53,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "mole_boy",
-    "path": "folders/Sprites/mole_boy.yy",
+    "name": "unused",
+    "path": "folders/Sprites/mole_boy/unused.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

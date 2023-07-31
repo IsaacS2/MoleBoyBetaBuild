@@ -126,10 +126,7 @@ if (keyboard_check_pressed(vk_escape) && !global.dead && !global.powerupActivate
 		func_freeze_screen();
 	}
 	else {
-		with (all) {
-			image_speed = gamePausedImageSpeed;
-			layer_vspeed(obj_control.lay_id, -floor(global.layerSpeed / global.rockSlowDown));
-		}
+		func_unfreeze_screen();
 		instance_destroy(obj_button_restart);
 	}
 }
