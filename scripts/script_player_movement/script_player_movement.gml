@@ -198,10 +198,9 @@ function func_sprite_switch(_spr) {
 }
 
 function func_switchTo_powerup_activate() {
-	leftSaw = instance_create_layer(x - round(room_width/3), y - 48, "Instances", obj_powerup_saw);
-	rightSaw = instance_create_layer(x + round(room_width/3), y - 72, "Instances", obj_powerup_saw);
-	rightSaw.dir = -1;
-	rightSaw.image_xscale = -1;
+	leftSaw = instance_create_layer(x - round(room_width/3), y - 48, "Instances", obj_powerup_saw_left);
+	rightSaw = instance_create_layer(x + round(room_width/3), y - 72, "Instances", obj_powerup_saw_right);
+	func_switch_saw_direction(rightSaw);
 	func_initialize_powerup_screen();
 	state = func_powerup_state;
 	func_sprite_switch(powerupSawSprite);
