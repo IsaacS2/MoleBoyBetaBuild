@@ -115,10 +115,8 @@ func_death_state = function(_step) {
 	if (deathCnt < 1) {
 		stunCnt++;
 		if (stunCnt > endStun) {
-			currentSprite = deadSprite;
+			func_sprite_switch(deadSprite);
 			deathCnt++;
-			sprite_index = spr_mole_boy_death;
-			image_index = 0;
 		}
 	} else {
 		deathCnt++
@@ -131,12 +129,16 @@ func_death_state = function(_step) {
 }
 
 func_powerup_state = function(_step) {
-	if (stunCnt >= endStunSawPowerup) {
-		stunCnt = 0;
+	if (powerActCnt >= endSawPowerupAct) {
+		powerActCnt = 0;
 		func_switchFrom_powerup_activate();
+		exit;
 	}
 	else {
-		stunCnt++;
+		powerActCnt++;
+	}
+	if (image_index >= image_number - 1) {
+		image_angle += 24;
 	}
 }
 
@@ -157,17 +159,19 @@ drillY = 67;
 drillCnt = 0;
 drillStallCnt = 0;
 stunCnt = 0;
+powerActCnt = 0;
 deathCnt = 0;
 endDrill = 5;
 endStall = baseEndStall;
 endStun = 45;
-endStunSawPowerup = 30;
+endSawPowerupAct = 30;
 endDeath = 120;
 returnY = room_height / 64;
 rockCash = 50;
 sturdyRockCash = 100;
 questionRockCash = 500;
 deathSpriteSpeed = 12;
+centerYDiff = 32;  // to add to y values of sprites/objects that aim to be in the center of MB
 
 //
 // values for creating/changing worm meter
@@ -194,6 +198,8 @@ addRightPowerupSprite = false;
 addLeftPowerupSprite = false;
 powerupSawIconAnimationLength = sprite_get_number(spr_icon_powerup_saw);
 currSawIconIndex = 0;
+powerupActAnimationLength = sprite_get_number(spr_powerup_activated);
+currPowerupIndex = 0;
 
 //
 // Thanks to Shaun Spalding for state machine explanation from
@@ -208,6 +214,7 @@ deadSprite = spr_mole_boy_death;
 attackingSprite = spr_mole_boy_drilling_red;
 topDrillSprite = spr_mole_boy_front_drill_residue;
 bottomDrillSprite = spr_mole_boy_back_drill_residue;
+powerupSawSprite = spr_mole_boy_powerup_saw;
 currentSprite = normalSprite;
 
 //

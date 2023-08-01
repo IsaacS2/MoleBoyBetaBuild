@@ -13,8 +13,6 @@
     {"name":"inst_7AFFFBA2","path":"rooms/rm_excavation/rm_excavation.yy",},
     {"name":"inst_676A8104","path":"rooms/rm_excavation/rm_excavation.yy",},
     {"name":"inst_63DEF907","path":"rooms/rm_excavation/rm_excavation.yy",},
-    {"name":"inst_45F34A7","path":"rooms/rm_excavation/rm_excavation.yy",},
-    {"name":"inst_2D0FDF94","path":"rooms/rm_excavation/rm_excavation.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -25,8 +23,6 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7AFFFBA2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_boundary","path":"objects/obj_boundary/obj_boundary.yy",},"properties":[],"rotation":0.0,"scaleX":10.5,"scaleY":15.0,"x":-320.0,"y":480.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_676A8104","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_mole_boy","path":"objects/obj_mole_boy/obj_mole_boy.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":768.0,"y":384.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_63DEF907","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_control","path":"objects/obj_control/obj_control.yy",},"properties":[],"rotation":0.0,"scaleX":5.0,"scaleY":5.0,"x":960.0,"y":-96.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_45F34A7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_powerup_saw","path":"objects/obj_powerup_saw/obj_powerup_saw.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":192.0,"y":-48.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2D0FDF94","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_powerup_saw","path":"objects/obj_powerup_saw/obj_powerup_saw.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":736.0,"y":-48.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":60.0,"animationSpeedType":0,"colour":4294967295,"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"spr_default_background","path":"sprites/spr_default_background/spr_default_background.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":-9.0,"vtiled":true,"x":0,"y":0,},
   ],

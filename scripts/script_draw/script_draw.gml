@@ -1,5 +1,11 @@
 /// @description Draw Mole Boy and drill residue!
 function func_mole_boy_sprite() {
+	if (powerActCnt >= 1) {
+		draw_sprite(spr_powerup_activated, currPowerupIndex, x, y + 32);
+		if (currPowerupIndex < powerupActAnimationLength - 1) {
+			currPowerupIndex++;
+		}
+	}
 	if (currentSprite == normalSprite) {
 		draw_sprite_ext(bottomDrillSprite, -1, x, y, 1, 1, image_angle, c_white, 1);
 	}

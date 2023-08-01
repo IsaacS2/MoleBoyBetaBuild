@@ -191,21 +191,31 @@ function func_switchTo_dead() {
 	image_speed = 1;
 }
 
+function func_sprite_switch(_spr) {
+	currentSprite = _spr;
+	sprite_index = _spr;
+	image_index = 0;
+}
+
 function func_switchTo_powerup_activate() {
+	leftSaw = instance_create_layer(x - round(room_width/3), y - 48, "Instances", obj_powerup_saw);
+	rightSaw = instance_create_layer(x + round(room_width/3), y - 72, "Instances", obj_powerup_saw);
+	rightSaw.dir = -1;
+	rightSaw.image_xscale = -1;
 	func_initialize_powerup_screen();
 	state = func_powerup_state;
-	//currentSprite = stunnedSprite;
-	//playerSpriteSpeed = sprite_get_speed(sprite_index);
+	func_sprite_switch(powerupSawSprite);
 	momentum = 0;
 	image_angle = 0;
 	image_speed = 1;
 }
 
 function func_switchFrom_powerup_activate() {
-	//sprite_set_sprite(sprite_index, playerSpriteSpeed, spritespeed_framespersecond);
-	//currentSprite = normalSprite;
+	func_sprite_switch(normalSprite);
 	state = func_neutral_state;
+	image_angle = 0;
 	func_unfreeze_screen();
+	currPowerupIndex = 0;
 	global.powerupActivated = false;
 	global.gamePaused = false;
 }

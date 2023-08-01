@@ -13,14 +13,14 @@ func_falling_state = function() {
 
 dir = 1;
 stopY = round(room_height / 10);
-spawnX = room_width / 4;
+spawnX = round(room_width / 3);
 spawnY = -48;
 
 hitGround = false;
-hitBounce = -7;
+hitBounce = -6;
 vspd = 0;
-normalGravityAcceleration = .7;
-maxGravityPull = 30;
+normalGravityAcceleration = .8;
+maxGravityPull = 32;
 state = func_starting_state;
 
 dirtSpawnCnt = 0;

@@ -1,14 +1,15 @@
 /// @description Move saw!
-if (global.gamePaused) {
+if (global.gamePaused && !global.powerupActivated) {
 	exit;
 }
 
 state();
 
-dirtSpawnCnt += 1 / global.rockSlowDown;
+if (!global.gamePaused) {
+	dirtSpawnCnt += 1 / global.rockSlowDown;
 
-if (dirtSpawnCnt > dirtSpawnTimeLimit) {
-	instance_create_layer(x, y + dirtYSpawnDiff, "Instances", obj_dirt_patch_powerup_saw);
-	dirtSpawnCnt = 0;
+	if (dirtSpawnCnt > dirtSpawnTimeLimit) {
+		instance_create_layer(x, y + dirtYSpawnDiff, "Instances", obj_dirt_patch_powerup_saw);
+		dirtSpawnCnt = 0;
+	}
 }
-

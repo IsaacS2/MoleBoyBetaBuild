@@ -59,7 +59,7 @@ questionRockWidth = 128;  // technically half width
 minQuestionRockX = questionRockWidth;
 maxQuestionRockX = room_width - questionRockWidth;
 questionRockX = irandom_range(minQuestionRockX, maxQuestionRockX);
-questionRockCnt = 0;
+questionRockCnt = 699;
 questionRockIncVal = 1 * global.currentExcavationSpeed;
 
 //
