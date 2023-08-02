@@ -15,6 +15,7 @@
 //
 global.gamePaused = false;
 global.dead = false;
+global.powerActive = false;
 global.powerupActivated = false;
 global.speedChange = false;
 global.moleBoySpeedChange = false;
@@ -33,6 +34,7 @@ global.debug = false;
 function func_initialize_globals() {
 	global.gamePaused = false;
 	global.dead = false;
+	global.powerActive = false;
 	global.powerupActivated = false;
 	global.speedChange = false;
 	global.moleBoySpeedChange = false;

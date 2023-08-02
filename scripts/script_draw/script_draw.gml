@@ -8,10 +8,14 @@ function func_mole_boy_sprite() {
 	}
 	
 	if (instance_exists(obj_powerup_saw_left)) {
-		draw_line_width(x, y + centerYDiff, obj_powerup_saw_left.x, obj_powerup_saw_left.y, 2);
+		if (!obj_powerup_saw_left.falling) {
+			draw_line_width(x, y + centerYDiff, obj_powerup_saw_left.x, obj_powerup_saw_left.y, 2);
+		}
 	}
 	if (instance_exists(obj_powerup_saw_right)) {
-		draw_line_width(x, y + centerYDiff, obj_powerup_saw_right.x, obj_powerup_saw_right.y, 2);
+		if (!obj_powerup_saw_right.falling) {
+			draw_line_width(x, y + centerYDiff, obj_powerup_saw_right.x, obj_powerup_saw_right.y, 2);
+		}
 	}
 	if (currentSprite == normalSprite) {
 		draw_sprite_ext(bottomDrillSprite, -1, x, y, 1, 1, image_angle, c_white, 1);

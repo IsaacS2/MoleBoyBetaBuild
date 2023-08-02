@@ -12,4 +12,5 @@ if (!global.gamePaused) {
 		instance_create_layer(x, y + dirtYSpawnDiff, "Instances", obj_dirt_patch_powerup_saw);
 		dirtSpawnCnt = 0;
 	}
+	image_angle -= dir * dirtYSpawnDiff;
 }

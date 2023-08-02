@@ -21,11 +21,15 @@
 //
 func_neutral_state = function(_step) {
 	if (_step == beginStepVal) {
-		if (keyPower && (powerUp1 != 0 || powerUp2 != 0) && (global.rockSlowDown & outsideRockSpeed)) {
+		if (keyPower && (powerUp1 != 0 || powerUp2 != 0) && 
+		(global.rockSlowDown & outsideRockSpeed) && !global.powerActive) {
+			// if powerUp1 == powerUp2, super power!
 			if (powerUp1 != 0) {
 				powerUp1 = 0;
 			}
 			else {
+				currSawIconIndex = 0;
+				addRightPowerupSprite = false;
 				powerUp2 = 0;
 			}
 			func_switchTo_powerup_activate();
@@ -138,7 +142,7 @@ func_powerup_state = function(_step) {
 		powerActCnt++;
 	}
 	if (image_index >= image_number - 1) {
-		image_angle += 24;
+		image_angle += 18;
 	}
 }
 
@@ -164,7 +168,7 @@ deathCnt = 0;
 endDrill = 5;
 endStall = baseEndStall;
 endStun = 45;
-endSawPowerupAct = 30;
+endSawPowerupAct = 35;
 endDeath = 120;
 returnY = room_height / 64;
 rockCash = 50;

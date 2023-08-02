@@ -24,7 +24,9 @@ if (!global.gamePaused) {
 		// randomize next sturdy rock x-value location again
 	}
 	
-	questionRockCnt += questionRockIncVal / global.rockSlowDown;
+	if (!global.powerActive) {
+		questionRockCnt += questionRockIncVal / global.rockSlowDown;
+	}
 
 	// question rock enemy will be spawned down now
 	if (questionRockCnt >= questionRockSpawnTime) {
