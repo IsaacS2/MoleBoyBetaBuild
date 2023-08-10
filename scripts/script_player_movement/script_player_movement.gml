@@ -31,6 +31,8 @@ function func_movement(_obj, _direction, _maxDist){
 
 
 function func_switchTo_drilling() {
+	func_mole_stop_normal_drilling_sound();
+	func_mole_drill_attack_sound();
 	image_angle = 0;
 	currentSprite = attackingSprite;
 	right = 0;  // no more x-movement
@@ -130,6 +132,7 @@ function func_left_and_right_movement() {
 
 
 function func_switchTo_returning() {
+	audio_stop_sound(snd_down_drill);
 	drillCnt = 0;
 	drillStallCnt = 0;
 	directionIncVal = round(baseDirectionIncVal * global.currentMoleBoySpeed);
@@ -183,6 +186,7 @@ function func_switchFrom_inRock() {
 }
 
 function func_switchTo_dead() {
+	func_mole_stop_all_sounds();
 	func_initialize_death_screen();
 	sprite_set_speed(sprite_index, 60, spritespeed_framespersecond);
 	image_angle = 0;
@@ -198,6 +202,7 @@ function func_sprite_switch(_spr) {
 }
 
 function func_switchTo_powerup_activate() {
+	func_mole_stop_normal_drilling_sound();
 	global.powerActive = true;
 	leftSaw = instance_create_layer(x - round(room_width/3), y - 48, "Instances", obj_powerup_saw_left);
 	rightSaw = instance_create_layer(x + round(room_width/3), y - 72, "Instances", obj_powerup_saw_right);
@@ -216,6 +221,7 @@ function func_switchFrom_powerup_activate() {
 	image_angle = 0;
 	func_unfreeze_screen();
 	currPowerupIndex = 0;
+	func_mole_restart_normal_drilling_sound();
 	global.powerupActivated = false;
 	global.gamePaused = false;
 }

@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_power_up_saw",
-    "path": "sprites/spr_power_up_saw/spr_power_up_saw.yy",
+    "name": "spr_power_up_saw_big",
+    "path": "sprites/spr_power_up_saw_big/spr_power_up_saw_big.yy",
   },
   "spriteMaskId": null,
   "visible": true,

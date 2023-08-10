@@ -48,12 +48,20 @@ if ( (global.rockSlowDown & outsideRockSpeed) &&
 	(place_meeting(x, y, obj_rock_obstacle) || place_meeting(x, y, obj_big_rock_obstacle)) ) {
 	func_switchTo_inRock();
 } 
+
 //
 // Now must check if mole is out of rock to revert speed to normal.
 //
 else if ( (global.rockSlowDown & insideRockSpeed) && !place_meeting(x, y, obj_rock_obstacle) 
 	&& !place_meeting(x, y, obj_big_rock_obstacle) ) {
 	func_switchFrom_inRock();
+	func_mole_restart_normal_drilling_sound();
+}
+
+
+if ((global.rockSlowDown & insideRockSpeed) && restartInsideRockSound) {
+	restartInsideRockSound = false;
+	func_mole_restart_in_rock_sound();
 }
 
 

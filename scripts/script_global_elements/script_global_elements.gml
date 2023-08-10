@@ -50,6 +50,7 @@ function func_initialize_globals() {
 }
 
 function func_reset_excavation() {
+	audio_stop_all();
 	room_restart();
 }
 

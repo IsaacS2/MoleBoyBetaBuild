@@ -124,10 +124,12 @@ if (keyboard_check_pressed(vk_escape) && !global.dead && !global.powerupActivate
 	global.gamePaused = !global.gamePaused;
 	
 	if (global.gamePaused) {
+		audio_pause_all();
 		instance_create_layer(room_width / 2, room_height / 2, "Instances", obj_button_restart);
 		func_freeze_screen();
 	}
 	else {
+		audio_resume_all();
 		func_unfreeze_screen();
 		instance_destroy(obj_button_restart);
 	}

@@ -7,6 +7,12 @@ deathSprite = spr_question_enemy_left_dead;
 deathSpinningSprite = spr_question_enemy_left_dead_spinning;
 currentSprite = deathSprite;
 
+if (!place_meeting(x, y, obj_mole_boy)) {
+	falling = true;
+	currentSprite = deathSpinningSprite;
+	sprite_index = deathSpinningSprite;
+}
+
 depth = -6;
 xMovement = 6;
 yMovement = 6;

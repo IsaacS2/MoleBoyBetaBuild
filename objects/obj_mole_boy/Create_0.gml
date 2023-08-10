@@ -103,6 +103,7 @@ func_returning_state = function(_step) {
 	if (_step == beginStepVal) {
 		func_switchFrom_returning_and_yMovement();
 		if (y == startY) {
+			func_mole_restart_normal_drilling_sound();
 			state = func_neutral_state;
 		}
 		func_left_and_right_movement();
@@ -237,3 +238,12 @@ keyUp = false;
 keyDown = false;
 keyAttack = false;
 keyPower = false;
+
+
+//
+// Thanks to Shaun Spalding for sound effects explanation from
+// "GameMaker Studio 2: Complete Platformer Tutorial (Part 13: Sound effects)" youtube video
+// https://www.youtube.com/watch?v=AfQFZXdmAEs&t=24s
+//
+func_mole_restart_normal_drilling_sound();
+restartInsideRockSound = false;
