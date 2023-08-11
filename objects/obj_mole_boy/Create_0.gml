@@ -195,6 +195,7 @@ wormDecreaseCnt = 0;
 wormDecrementTime = 15;  // Determines the amount of frames until worm meter is updated
 originalWormDecrementTime = wormDecrementTime;
 wormBoost = round(wormMeterMax / 2);
+wormMeterQuarterVal = round(wormMeterVal / 4);
 
 powerupIconY = 92;
 leftPowerupIconX = 26;

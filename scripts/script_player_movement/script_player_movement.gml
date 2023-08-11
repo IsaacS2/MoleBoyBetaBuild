@@ -48,12 +48,14 @@ function func_destroy_rocks() {
 		instance_create_depth(sturdyRock.x, sturdyRock.y, 0, obj_rock_sturdy_broken);  // new broken rock that plays animation
 		instance_destroy(instance_nearest(x, y, obj_rock_sturdy_obstacle));
 		global.newWinnings += sturdyRockCash;
+		func_rock_destroy_sound();
 	}
 	while (place_meeting(x, y, obj_rock_obstacle)) {
 		var rock = instance_nearest(x, y, obj_rock_obstacle);
 		instance_create_depth(rock.x, rock.y, 0, obj_rock_broken);  // new broken rock that plays animation
 		instance_destroy(instance_nearest(x, y, obj_rock_obstacle));
 		global.newWinnings += rockCash;
+		func_rock_destroy_sound();
 	}
 	if (place_meeting(x, y, obj_question_enemy)) {
 		var questionEnemy = instance_nearest(x, y, obj_question_enemy);
@@ -71,6 +73,7 @@ function func_destroy_rocks() {
 				global.newWinnings += questionRockCash;
 			}
 			instance_create_layer(x, y, "Instances", obj_question_enemy_dead);
+			func_rock_destroy_sound();
 		}
 	}
 }
@@ -187,6 +190,7 @@ function func_switchFrom_inRock() {
 
 function func_switchTo_dead() {
 	func_mole_stop_all_sounds();
+	func_squeak_sound();
 	func_initialize_death_screen();
 	sprite_set_speed(sprite_index, 60, spritespeed_framespersecond);
 	image_angle = 0;
@@ -204,6 +208,9 @@ function func_sprite_switch(_spr) {
 function func_switchTo_powerup_activate() {
 	func_mole_stop_normal_drilling_sound();
 	global.powerActive = true;
+	if (global.sawSound != noone) {
+		audio_pause_sound(global.sawSound);
+	}
 	leftSaw = instance_create_layer(x - round(room_width/3), y - 48, "Instances", obj_powerup_saw_left);
 	rightSaw = instance_create_layer(x + round(room_width/3), y - 72, "Instances", obj_powerup_saw_right);
 	func_switch_saw_direction(rightSaw);
@@ -222,6 +229,10 @@ function func_switchFrom_powerup_activate() {
 	func_unfreeze_screen();
 	currPowerupIndex = 0;
 	func_mole_restart_normal_drilling_sound();
+	if (global.sawSound != noone) {
+		audio_resume_sound(global.sawSound);
+	}
+	
 	global.powerupActivated = false;
 	global.gamePaused = false;
 }

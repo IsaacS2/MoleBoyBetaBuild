@@ -65,8 +65,8 @@ questionRockIncVal = 1 * global.currentExcavationSpeed;
 //
 // values for spawning saws
 //
-minSawSpawnTime = 80;
-maxSawSpawnTime = 100;
+minSawSpawnTime = 160;
+maxSawSpawnTime = 200;
 sawSpawnTime = irandom_range(minSawSpawnTime, maxSawSpawnTime);
 sawWidth = 32;
 minSawX = sawWidth;

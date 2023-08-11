@@ -13,6 +13,9 @@ if (place_meeting(x, y, obj_worm)) {
 	eatenWorm.image_xscale = -right;
 	// min function keeps bar from overflowing
 	wormMeterVal = min(wormMeterMax, wormMeterVal + wormBoost);  // Delicious worm!
+	if (wormMeterVal >= wormMeterQuarterVal && audio_is_playing(snd_beep)) {
+		func_stop_sound(snd_beep);
+	}
 }
 
 //
@@ -97,4 +100,8 @@ if (wormDecreaseCnt >= wormDecrementTime) {
 	else if (global.debug) {
 		wormMeterVal = wormMeterMax;
 	}
+}
+
+if (wormMeterVal < wormMeterQuarterVal && !audio_is_playing(snd_beep)) {
+	func_beep_sound();
 }

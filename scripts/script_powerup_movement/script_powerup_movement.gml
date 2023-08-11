@@ -62,12 +62,14 @@ function func_destroy_obstacles() {
 		instance_create_depth(sturdyRock.x, sturdyRock.y, 0, obj_rock_sturdy_broken);  // new broken rock that plays animation
 		instance_destroy(instance_nearest(x, y, obj_rock_sturdy_obstacle));
 		global.newWinnings += obj_mole_boy.sturdyRockCash;
+		func_rock_destroy_sound();
 	}
 	while (place_meeting(x, y, obj_rock_obstacle)) {
 		var rock = instance_nearest(x, y, obj_rock_obstacle);
 		instance_create_depth(rock.x, rock.y, 0, obj_rock_broken);  // new broken rock that plays animation
 		instance_destroy(instance_nearest(x, y, obj_rock_obstacle));
 		global.newWinnings += obj_mole_boy.rockCash;
+		func_rock_destroy_sound();
 	}
 	if (place_meeting(x, y, obj_question_enemy)) {
 		var questionEnemy = instance_nearest(x, y, obj_question_enemy);
@@ -85,6 +87,7 @@ function func_destroy_obstacles() {
 				global.newWinnings += obj_mole_boy.questionRockCash;
 			}
 			instance_create_layer(x, y, "Instances", obj_question_enemy_dead);
+			func_rock_destroy_sound();
 		}
 	}
 	while (place_meeting(x, y, obj_saw_obstacle)) {

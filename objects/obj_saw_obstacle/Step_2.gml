@@ -1,4 +1,6 @@
 /// @description Turn saws!
-if (!global.gamePaused) {
-	image_angle += 5;
+if (global.gamePaused) {
+	exit;
 }
+
+image_angle += 5;

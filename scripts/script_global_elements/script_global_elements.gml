@@ -7,6 +7,7 @@
 #macro beginStepVal 0
 #macro stepVal 1
 #macro endStepVal 2
+#macro moleYValueStart round(room_height / 10)
 
 //
 // global variables
@@ -30,6 +31,7 @@ global.scoreIncrementVal = baseScoreIncrementVal * global.currentExcavationSpeed
 global.bestDepth = 0;
 global.totalWinnings = 0;
 global.debug = false;
+global.sawSound = noone;
 
 function func_initialize_globals() {
 	global.gamePaused = false;
@@ -46,6 +48,7 @@ function func_initialize_globals() {
 	global.currentExcavationWinnings = 0;
 	global.newWinnings = 0;
 	global.scoreIncrementVal = baseScoreIncrementVal * global.currentExcavationSpeed;
+	global.sawSound = noone;
 	sprite_set_speed(spr_mole_boy_no_effects, 60, spritespeed_framespersecond);
 }
 
