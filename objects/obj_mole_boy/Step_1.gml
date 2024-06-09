@@ -1,6 +1,6 @@
 /// @description Character Movement
 
-// Should drilling be influenced by direction?
+// Develop typing out-loud: Should drilling be influenced by direction?
 // ...
 // YES, but only by a little (at the start, at least)
 

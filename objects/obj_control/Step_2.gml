@@ -56,12 +56,25 @@ if (!global.gamePaused) {
 
 	// saw will be spawned down now
 	if (sawCnt >= sawSpawnTime) {
-		instance_create_depth(sawX, room_height + 48, 0, obj_saw_obstacle);
-		sawCnt = 0;
-		sawSpawnTime = irandom_range(minSawSpawnTime, maxSawSpawnTime);
-		// randomize saw timing again
-		sawX = irandom_range(minSawX, maxSawX);
-		// randomize next saw x-value location again 
+		// 1/10 chance that saw wall will be spawned instead of a single saw,
+		var randSawVal = irandom(16);
+		
+		if (global.debug) {  // spawn only saw walls, for testing
+			randSawVal = irandom_range(14, 15)
+		}
+		
+		if (randSawVal < 13) { // spawn regular saws
+			instance_create_depth(sawX, room_height + 48, 0, obj_saw_obstacle);
+			sawCnt = 0;
+			sawSpawnTime = irandom_range(minSawSpawnTime, maxSawSpawnTime);
+			// randomize saw timing again
+			sawX = irandom_range(minSawX, maxSawX);
+			// randomize next saw x-value location again 
+		}
+		else if (randSawVal > 14) {  // spawn saw walls
+			sawWallX = irandom_range(-sawWallMaxXDiff, sawWallMaxXDiff);
+			instance_create_depth(sawWallX, room_height + 48, 0, saw_wall_spawner);
+		}
 	}
 
 
@@ -90,6 +103,7 @@ if (!global.gamePaused) {
 		// randomize next worm x-value location again 
 	}
 
+	// increase game speed
 	if (keyboard_check_pressed(ord("G"))) {
 		global.currentExcavationSpeed += 0.5;
 		global.layerSpeed = floor(startingLayerSpeed * global.currentExcavationSpeed);
@@ -97,11 +111,13 @@ if (!global.gamePaused) {
 		global.speedChange = true;
 	}
 
+	// increase mole boy speed
 	if (keyboard_check_pressed(ord("M"))) {
 		global.currentMoleBoySpeed += 0.5;
 		global.moleBoySpeedChange = true;
 	}
 	
+	// debug mode on/off
 	if (keyboard_check_pressed(ord("D"))) {
 		global.debug = !global.debug;
 		if (global.debug) {

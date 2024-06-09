@@ -69,6 +69,7 @@ minSawSpawnTime = 160;
 maxSawSpawnTime = 200;
 sawSpawnTime = irandom_range(minSawSpawnTime, maxSawSpawnTime);
 sawWidth = 32;
+sawWallMaxXDiff = 128;
 minSawX = sawWidth;
 maxSawX = room_width - sawWidth;
 sawX = irandom_range(minSawX, maxSawX);

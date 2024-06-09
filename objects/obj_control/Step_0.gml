@@ -15,7 +15,8 @@ if (global.speedChange) {
 if (dirtSpawnDeterminant >= global.rockSlowDown) {
 	currDirtYMultiple = (currDirtYMultiple + 1) % maxExclusiveDirtYMultiple;
 }
-// Code below results in dirt patches being spawned every other frame when slow-down occurs,
+
+// Dirt patches are spawned every other frame when slow-down occurs,
 // since dirt will not spawn when dirtSpawnDeterminant is outsideRockSpeed while global.rockSlowDown is insideRockSpeed.
 if dirtSpawnDeterminant == 1 {
 	dirtSpawnDeterminant = 2;

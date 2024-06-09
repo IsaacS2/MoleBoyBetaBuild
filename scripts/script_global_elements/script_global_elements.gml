@@ -8,6 +8,7 @@
 #macro stepVal 1
 #macro endStepVal 2
 #macro moleYValueStart round(room_height / 10)
+#macro obstacleSawRadius 128
 
 //
 // global variables
